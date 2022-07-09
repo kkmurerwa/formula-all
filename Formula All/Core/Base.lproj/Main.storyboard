@@ -65,7 +65,7 @@
         <!--Drivers-->
         <scene sceneID="xpX-O5-O8w">
             <objects>
-                <viewController id="Koz-Lp-IzT" sceneMemberID="viewController">
+                <viewController id="Koz-Lp-IzT" customClass="DriversViewController" customModule="Formula_All" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nIN-OV-Zfs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

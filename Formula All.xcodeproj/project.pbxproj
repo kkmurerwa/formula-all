@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F505D6892879D28F00EFB31F /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505D6882879D28F00EFB31F /* Urls.swift */; };
+		F505D68B2879D2C400EFB31F /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505D68A2879D2C400EFB31F /* ImageLoader.swift */; };
+		F505D68D2879D2EE00EFB31F /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505D68C2879D2EE00EFB31F /* ImageCacheManager.swift */; };
+		F505D6912879D92D00EFB31F /* DriverRankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505D6902879D92D00EFB31F /* DriverRankingResponse.swift */; };
+		F505D6932879D98A00EFB31F /* DriverRankingDriverInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505D6922879D98A00EFB31F /* DriverRankingDriverInfo.swift */; };
+		F505D6952879D9E600EFB31F /* DriverRankingTeamInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505D6942879D9E600EFB31F /* DriverRankingTeamInfo.swift */; };
+		F505D6972879DA3900EFB31F /* DriverRankingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505D6962879DA3900EFB31F /* DriverRankingItem.swift */; };
+		F505D6992879E9E700EFB31F /* DriverRankingModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505D6982879E9E700EFB31F /* DriverRankingModelDelegate.swift */; };
+		F505D69B2879EA5400EFB31F /* DriverRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505D69A2879EA5400EFB31F /* DriverRankingModel.swift */; };
+		F505D69D2879EB6800EFB31F /* DriversViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F505D69C2879EB6800EFB31F /* DriversViewController.swift */; };
 		F55EBAA32879930A00FD6F59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55EBAA22879930A00FD6F59 /* AppDelegate.swift */; };
 		F55EBAA52879930A00FD6F59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55EBAA42879930A00FD6F59 /* SceneDelegate.swift */; };
 		F55EBAAA2879930A00FD6F59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55EBAA82879930A00FD6F59 /* Main.storyboard */; };
@@ -15,6 +25,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F505D6882879D28F00EFB31F /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		F505D68A2879D2C400EFB31F /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		F505D68C2879D2EE00EFB31F /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
+		F505D6902879D92D00EFB31F /* DriverRankingResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRankingResponse.swift; sourceTree = "<group>"; };
+		F505D6922879D98A00EFB31F /* DriverRankingDriverInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRankingDriverInfo.swift; sourceTree = "<group>"; };
+		F505D6942879D9E600EFB31F /* DriverRankingTeamInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRankingTeamInfo.swift; sourceTree = "<group>"; };
+		F505D6962879DA3900EFB31F /* DriverRankingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRankingItem.swift; sourceTree = "<group>"; };
+		F505D6982879E9E700EFB31F /* DriverRankingModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRankingModelDelegate.swift; sourceTree = "<group>"; };
+		F505D69A2879EA5400EFB31F /* DriverRankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverRankingModel.swift; sourceTree = "<group>"; };
+		F505D69C2879EB6800EFB31F /* DriversViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriversViewController.swift; sourceTree = "<group>"; };
 		F55EBA9F2879930A00FD6F59 /* Formula All.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Formula All.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55EBAA22879930A00FD6F59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F55EBAA42879930A00FD6F59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +55,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F505D6832879D1DB00EFB31F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F505D6902879D92D00EFB31F /* DriverRankingResponse.swift */,
+				F505D6922879D98A00EFB31F /* DriverRankingDriverInfo.swift */,
+				F505D6942879D9E600EFB31F /* DriverRankingTeamInfo.swift */,
+				F505D6962879DA3900EFB31F /* DriverRankingItem.swift */,
+				F505D69A2879EA5400EFB31F /* DriverRankingModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F505D6842879D1E200EFB31F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				F505D69C2879EB6800EFB31F /* DriversViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		F505D6852879D1EF00EFB31F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F505D6982879E9E700EFB31F /* DriverRankingModelDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		F505D6862879D1FB00EFB31F /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F505D6872879D25800EFB31F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				F505D6882879D28F00EFB31F /* Urls.swift */,
+				F505D68A2879D2C400EFB31F /* ImageLoader.swift */,
+				F505D68C2879D2EE00EFB31F /* ImageCacheManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		F55EBA962879930A00FD6F59 = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +142,8 @@
 		F55EBAB72879931F00FD6F59 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F505D6872879D25800EFB31F /* Utils */,
+				F505D6862879D1FB00EFB31F /* Network */,
 				F55EBAA22879930A00FD6F59 /* AppDelegate.swift */,
 				F55EBAAD2879930C00FD6F59 /* LaunchScreen.storyboard */,
 				F55EBAA82879930A00FD6F59 /* Main.storyboard */,
@@ -96,6 +163,9 @@
 		F55EBAB9287994B800FD6F59 /* Drivers */ = {
 			isa = PBXGroup;
 			children = (
+				F505D6852879D1EF00EFB31F /* Delegates */,
+				F505D6842879D1E200EFB31F /* View Controllers */,
+				F505D6832879D1DB00EFB31F /* Models */,
 			);
 			path = Drivers;
 			sourceTree = "<group>";
@@ -199,8 +269,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F505D6892879D28F00EFB31F /* Urls.swift in Sources */,
 				F55EBAA32879930A00FD6F59 /* AppDelegate.swift in Sources */,
+				F505D6992879E9E700EFB31F /* DriverRankingModelDelegate.swift in Sources */,
+				F505D69B2879EA5400EFB31F /* DriverRankingModel.swift in Sources */,
+				F505D6972879DA3900EFB31F /* DriverRankingItem.swift in Sources */,
+				F505D6932879D98A00EFB31F /* DriverRankingDriverInfo.swift in Sources */,
+				F505D68D2879D2EE00EFB31F /* ImageCacheManager.swift in Sources */,
+				F505D68B2879D2C400EFB31F /* ImageLoader.swift in Sources */,
+				F505D69D2879EB6800EFB31F /* DriversViewController.swift in Sources */,
 				F55EBAA52879930A00FD6F59 /* SceneDelegate.swift in Sources */,
+				F505D6912879D92D00EFB31F /* DriverRankingResponse.swift in Sources */,
+				F505D6952879D9E600EFB31F /* DriverRankingTeamInfo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

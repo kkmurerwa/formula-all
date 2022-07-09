@@ -1,0 +1,78 @@
+//
+//  Urls.swift
+//  Formula All
+//
+//  Created by Kenneth Murerwa on 09/07/2022.
+//
+
+import Foundation
+
+class Urls {
+    
+    static let API_URL = "https://v1.formula-1.api-sports.io"
+    
+    
+    // MARK: - API Auth section
+    
+    static let WEB_HOST = "v1.formula-1.api-sports.io"
+    static let ACCESS_TOKEN = "b18a979cf82175f555de495616992e33"
+    
+    
+    static func API_REQUEST(url: URL, httpMethod: String = "GET") -> URLRequest? {
+        var request = URLRequest(url: url)
+        request.httpMethod = httpMethod
+        request.setValue("application/json", forHTTPHeaderField:"Content-Type")
+        request.setValue(WEB_HOST, forHTTPHeaderField: "x-rapidapi-host")
+        request.setValue(ACCESS_TOKEN, forHTTPHeaderField:"x-rapidapi-key")
+        request.timeoutInterval = 60.0
+        
+        return request
+    }
+    
+    
+    // MARK: - Driver URLs
+    
+    static func SEARCH_DRIVERS_URL(withKey: String) -> String {
+        return "\(API_URL)/drivers?search=\(withKey)"
+    }
+    
+    static func DRIVER_RANKINGS_URL(forYear: String) -> String {
+        return "\(API_URL)/rankings/drivers?season=\(forYear)"
+    }
+    
+    
+    // MARK: - Teams URLs
+    
+    static let TEAMS_URL = "\(API_URL)/teams"
+    
+    static func SEARCH_TEAMS_URL(withKey: String) -> String {
+        return "\(API_URL)/teams?search=\(withKey)"
+    }
+    
+    
+    // MARK: - Rankings URLs
+    
+    static func TEAM_RANKINGS_BY_SEASON(forSeason: String) -> String {
+        return "\(API_URL)/rankings/teams?season=\(forSeason)"
+    }
+    
+    static func RACE_RANKINGS_BY_RACE(withRaceId: String) -> String {
+        return "\(API_URL)/rankings/races?race=\(withRaceId)"
+    }
+    
+    static func STARTING_GRID_BY_RACE(withRaceId: String) -> String {
+        return "\(API_URL)/rankings/startinggrid?race=\(withRaceId)"
+    }
+    
+    
+    // MARK: - Races URLs
+    
+    static func RACES_BY_SEASON(forSeason: String) -> String {
+        return "\(API_URL)/races?season=\(forSeason)"
+    }
+    
+    
+    // MARK: - Circuits URLs
+    static let CIRCUITS_URL = "\(API_URL)/circuits"
+    
+}
