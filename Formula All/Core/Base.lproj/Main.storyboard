@@ -82,7 +82,7 @@
         <scene sceneID="3QN-qO-Xgg">
             <objects>
                 <navigationController id="R4Z-Vs-Qro" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Teams" image="racing-car" id="zET-8N-RHB"/>
+                    <tabBarItem key="tabBarItem" title="Teams" image="f1-car" id="zET-8N-RHB"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4hM-gP-rbp">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -195,10 +195,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="f1-car" width="25" height="25"/>
         <image name="helmet" width="25" height="25"/>
         <image name="race" width="25" height="25"/>
         <image name="race-track" width="25" height="25"/>
-        <image name="racing-car" width="25" height="25"/>
         <image name="ranking" width="25" height="25"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
