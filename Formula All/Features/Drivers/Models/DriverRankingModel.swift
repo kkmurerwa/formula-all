@@ -64,8 +64,6 @@ class DriverRankingModel {
                 
                 }
                 
-                dump(response)
-                
             } catch {
                 
                 // Print error message

@@ -11,6 +11,13 @@ class ImageLoader {
     
     static func loadImage(from url: String, into imageView: UIImageView) {
         
+        // Save time by not fetching blank urls
+        if url.isEmpty {
+            imageView.image = UIImage()
+            return
+        }
+        
+        
         // Check image cache before downloading data
         if let cachedData = ImageCacheManager.getImageCache(url) {
             
