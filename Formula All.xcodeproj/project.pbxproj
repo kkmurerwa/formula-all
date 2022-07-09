@@ -65,11 +65,11 @@
 		F55EBAB62879931400FD6F59 /* Features */ = {
 			isa = PBXGroup;
 			children = (
-				F55EBABD2879950400FD6F59 /* Grands Prix */,
 				F55EBABC287994E800FD6F59 /* Constructors */,
+				F55EBAB9287994B800FD6F59 /* Drivers */,
+				F55EBABD2879950400FD6F59 /* Circuits */,
 				F55EBABB287994C400FD6F59 /* Races */,
 				F55EBABA287994BF00FD6F59 /* Rankings */,
-				F55EBAB9287994B800FD6F59 /* Drivers */,
 			);
 			path = Features;
 			sourceTree = "<group>";
@@ -77,10 +77,10 @@
 		F55EBAB72879931F00FD6F59 /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				F55EBAA42879930A00FD6F59 /* SceneDelegate.swift */,
 				F55EBAA22879930A00FD6F59 /* AppDelegate.swift */,
 				F55EBAAD2879930C00FD6F59 /* LaunchScreen.storyboard */,
 				F55EBAA82879930A00FD6F59 /* Main.storyboard */,
+				F55EBAA42879930A00FD6F59 /* SceneDelegate.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -121,11 +121,11 @@
 			path = Constructors;
 			sourceTree = "<group>";
 		};
-		F55EBABD2879950400FD6F59 /* Grands Prix */ = {
+		F55EBABD2879950400FD6F59 /* Circuits */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = "Grands Prix";
+			path = Circuits;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

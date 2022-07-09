@@ -1,24 +1,207 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="FGC-Yc-rfi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="qBa-Ky-tDk">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="FGC-Yc-rfi" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="StV-J3-LkZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Xbd-yP-mby" kind="relationship" relationship="viewControllers" id="aRi-E3-ia2"/>
+                        <segue destination="R4Z-Vs-Qro" kind="relationship" relationship="viewControllers" id="R4k-v2-Imx"/>
+                        <segue destination="peT-76-9Xe" kind="relationship" relationship="viewControllers" id="zsv-K7-fDA"/>
+                        <segue destination="sxW-wM-T3n" kind="relationship" relationship="viewControllers" id="5sj-0l-zUE"/>
+                        <segue destination="KbM-DG-rzO" kind="relationship" relationship="viewControllers" id="8hK-Bo-c6o"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IcP-6Y-3Gv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-75" y="-499"/>
+        </scene>
+        <!--Circuits-->
+        <scene sceneID="uW4-SQ-gxn">
+            <objects>
+                <navigationController id="KbM-DG-rzO" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Circuits" image="race-track" id="Ehh-wU-j45"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hyd-8u-anW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QSv-tn-VkE" kind="relationship" relationship="rootViewController" id="icZ-ks-bNC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAA-5E-eoQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1797" y="263"/>
+        </scene>
+        <!--Drivers-->
+        <scene sceneID="pxW-ng-tat">
+            <objects>
+                <navigationController id="Xbd-yP-mby" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Drivers" image="helmet" id="jwI-dV-geK"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nbq-6s-EvF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Koz-Lp-IzT" kind="relationship" relationship="rootViewController" id="9Ln-bK-HgB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vyb-Xt-l6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1977" y="263"/>
+        </scene>
+        <!--Drivers-->
+        <scene sceneID="xpX-O5-O8w">
+            <objects>
+                <viewController id="Koz-Lp-IzT" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nIN-OV-Zfs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="aJf-mV-dea"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Drivers" id="cmG-0a-Qz1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wDZ-zh-LAE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1978" y="1064"/>
+        </scene>
+        <!--Teams-->
+        <scene sceneID="3QN-qO-Xgg">
+            <objects>
+                <navigationController id="R4Z-Vs-Qro" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Teams" image="racing-car" id="zET-8N-RHB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4hM-gP-rbp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="pgo-yX-rPf" kind="relationship" relationship="rootViewController" id="Zri-Xl-8Ez"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ujP-kh-nZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1026" y="263"/>
+        </scene>
+        <!--Races-->
+        <scene sceneID="pK1-h1-cgi">
+            <objects>
+                <navigationController id="sxW-wM-T3n" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Races" image="race" id="D9X-5N-SZf"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nmm-iE-Vyx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="DtO-kW-b5O" kind="relationship" relationship="rootViewController" id="Z85-Fy-EMI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YQa-g5-uS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="881" y="263"/>
+        </scene>
+        <!--Rankings-->
+        <scene sceneID="tEU-Yw-UfT">
+            <objects>
+                <navigationController id="peT-76-9Xe" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Rankings" image="ranking" id="VRd-XD-jki"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H1z-wO-9E5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="b7u-yD-gCw" kind="relationship" relationship="rootViewController" id="i7u-Hb-WIB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AJ4-wS-uRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75" y="263"/>
+        </scene>
+        <!--Circuits-->
+        <scene sceneID="wkR-jf-sMc">
+            <objects>
+                <viewController id="QSv-tn-VkE" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mdg-bS-aeM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Nr7-0X-dUB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Circuits" id="VRO-Fn-Qfr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bFs-by-5Z3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1796" y="1063"/>
+        </scene>
+        <!--Races-->
+        <scene sceneID="guR-1E-V86">
+            <objects>
+                <viewController id="DtO-kW-b5O" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZxM-4P-GjT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="kU6-PJ-nxO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Races" id="fpz-fN-I63"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mhO-IR-dQt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="1063"/>
+        </scene>
+        <!--Rankings-->
+        <scene sceneID="clK-qg-FW9">
+            <objects>
+                <viewController id="b7u-yD-gCw" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yR4-h8-Kb1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="zio-c3-EX2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Rankings" id="dcL-lp-xRW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhH-Yc-tAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75" y="1063"/>
+        </scene>
+        <!--Teams-->
+        <scene sceneID="IlO-a6-BP4">
+            <objects>
+                <viewController id="pgo-yX-rPf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TyY-9h-ilx">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rwl-Bx-Sje"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Teams" id="ItJ-bx-UQQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJS-y2-gXK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1026" y="1063"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="helmet" width="25" height="25"/>
+        <image name="race" width="25" height="25"/>
+        <image name="race-track" width="25" height="25"/>
+        <image name="racing-car" width="25" height="25"/>
+        <image name="ranking" width="25" height="25"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
