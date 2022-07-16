@@ -11,14 +11,20 @@ class DriversViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var seasonsPopupButton: UIButton!
+    
     var model = DriverRankingModel()
     
     var drivers = [DriverRankingItem]()
+    
+    var selectedYear = "2022"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         print("DriversViewController did load")
+        
+        setPopupButton()
         
         // Set table view data source and delegate as the viewcontroller(self)
         tableView.dataSource = self
@@ -30,8 +36,44 @@ class DriversViewController: UIViewController {
         // Set model delegate as viewcontroller(self)
         model.delegate = self
         
+        fetchSelectedYearDrivers()
+    }
+    
+    func fetchSelectedYearDrivers() {
         // Initial network call
-        model.getDriverRanking(year: "2022")
+        model.getDriverRanking(year: "\(selectedYear)")
+    }
+    
+    // MARK: - Seasons Popup Button
+    
+    func setPopupButton() {
+        
+        let optionClosure = {(action: UIAction) in
+            print(action.title)
+            
+            self.selectedYear = action.title
+
+            self.fetchSelectedYearDrivers()
+//            self.model.getDriverRanking(year: "\(action.title)")
+        }
+        
+        seasonsPopupButton.menu = UIMenu(children: [
+            UIAction(title: "2022", state: .on, handler: optionClosure),
+            UIAction(title: "2021", handler: optionClosure),
+            UIAction(title: "2020", handler: optionClosure),
+            UIAction(title: "2019", handler: optionClosure),
+            UIAction(title: "2018", handler: optionClosure),
+            UIAction(title: "2017", handler: optionClosure),
+            UIAction(title: "2016", handler: optionClosure),
+            UIAction(title: "2015", handler: optionClosure),
+            UIAction(title: "2014", handler: optionClosure),
+            UIAction(title: "2013", handler: optionClosure),
+            UIAction(title: "2012", handler: optionClosure),
+            UIAction(title: "2011", handler: optionClosure),
+        ])
+        
+        seasonsPopupButton.showsMenuAsPrimaryAction = true
+        seasonsPopupButton.changesSelectionAsPrimaryAction = true
     }
 
 }
@@ -68,7 +110,7 @@ extension DriversViewController: UITableViewDataSource, UITableViewDelegate {
         // Get title for current video
         let driver = self.drivers[indexPath.row]
         
-        cell.setDetails(driver)
+        cell.setDetails(indexPath.item + 1, driver)
         
         // Return the cell for displaying
         return cell

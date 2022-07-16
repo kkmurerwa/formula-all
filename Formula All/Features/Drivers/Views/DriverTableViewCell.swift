@@ -9,11 +9,13 @@ import UIKit
 
 class DriverTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var positionLabel: UILabel!
+    
     @IBOutlet weak var driverImageView: UIImageView!
     
     @IBOutlet weak var nameLabel: UILabel!
     
-    @IBOutlet weak var abbreviationLabel: UILabel!
+//    @IBOutlet weak var abbreviationLabel: UILabel!
     
     @IBOutlet weak var teamLabel: UILabel!
     
@@ -32,14 +34,15 @@ class DriverTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setDetails(_ passedDriver: DriverRankingItem) {
+    func setDetails(_ position: Int, _ passedDriver: DriverRankingItem) {
         
         // Clear previous values on reused cell
         self.driverImageView.image = nil
         
+        self.positionLabel.text = ""
         self.nameLabel.text = ""
         self.teamLabel.text = ""
-        self.abbreviationLabel.text = ""
+//        self.abbreviationLabel.text = ""
         self.pointsLabel.text = ""
         
         self.driverItem = passedDriver
@@ -49,11 +52,14 @@ class DriverTableViewCell: UITableViewCell {
             return
         }
         
-        // Set char name
+        // Set char vars
+        self.positionLabel.text = String(position)
         self.nameLabel.text = driverItem?.driver?.name
-        self.abbreviationLabel.text = driverItem?.driver?.abbr
+//        self.abbreviationLabel.text = driverItem?.driver?.abbr
         self.teamLabel.text = driverItem?.team?.name
-        self.pointsLabel.text = "\(driverItem?.points ?? 0) Points"
+        self.pointsLabel.text = "\(driverItem?.points ?? "0") Points"
+        
+//        print("Points: \(driverItem?.points)")
         
         // Load image with custom class
         ImageLoader.loadImage(from: driverItem?.driver?.image ?? "", into: driverImageView)

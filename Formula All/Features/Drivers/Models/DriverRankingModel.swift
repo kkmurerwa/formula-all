@@ -58,6 +58,8 @@ class DriverRankingModel {
                     // Call the main thread to pass the function through it
                     DispatchQueue.main.async {
                         
+                        dump(response.items)
+                        
                         // Call the "driversFetched" method of the delegate
                         self.delegate?.driversFetched(response.items!)
                     }
