@@ -15,8 +15,6 @@ class DriverTableViewCell: UITableViewCell {
     
     @IBOutlet weak var nameLabel: UILabel!
     
-//    @IBOutlet weak var abbreviationLabel: UILabel!
-    
     @IBOutlet weak var teamLabel: UILabel!
     
     @IBOutlet weak var pointsLabel: UILabel!
@@ -42,7 +40,6 @@ class DriverTableViewCell: UITableViewCell {
         self.positionLabel.text = ""
         self.nameLabel.text = ""
         self.teamLabel.text = ""
-//        self.abbreviationLabel.text = ""
         self.pointsLabel.text = ""
         
         self.driverItem = passedDriver
@@ -55,14 +52,13 @@ class DriverTableViewCell: UITableViewCell {
         // Set char vars
         self.positionLabel.text = String(position)
         self.nameLabel.text = driverItem?.driver?.name
-//        self.abbreviationLabel.text = driverItem?.driver?.abbr
         self.teamLabel.text = driverItem?.team?.name
         self.pointsLabel.text = "\(driverItem?.points ?? "0") Points"
         
 //        print("Points: \(driverItem?.points)")
         
         // Load image with custom class
-        ImageLoader.loadImage(from: driverItem?.driver?.image ?? "", into: driverImageView)
+        self.driverImageView.loadImage(from: driverItem?.driver?.image ?? "")
         
     }
 

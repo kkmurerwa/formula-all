@@ -1,0 +1,23 @@
+//
+//  CircuitsResponse.swift
+//  Formula All
+//
+//  Created by Kenneth Murerwa on 17/07/2022.
+//
+
+import Foundation
+
+struct CircuitsResponse: Decodable {
+    
+    var items: [CircuitItem]?
+    
+    enum CodingKeys: String, CodingKey {
+        case items = "response"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        self.items = try container.decode([CircuitItem].self, forKey: .items)
+    }
+}

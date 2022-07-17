@@ -1,20 +1,22 @@
 //
-//  DriverRankingModel.swift
+//  CircuitsModel.swift
 //  Formula All
 //
-//  Created by Kenneth Murerwa on 09/07/2022.
+//  Created by Kenneth Murerwa on 17/07/2022.
 //
 
 import Foundation
 
-class DriverRankingModel {
+class CircuitsModel {
     
-    var delegate: DriverRankingModelDelegate?
+    var delegate: CircuitsModelDelegate?
     
-    func getDriverRanking(year: String) {
+    func getCircuits() {
+        
+        print("Circuits loading")
         
         // Create a URL object
-        let url = URL(string: Urls.DRIVER_RANKINGS_URL(forYear: year))
+        let url = URL(string: Urls.CIRCUITS_URL)
         
         // Make sure url has a value
         guard url != nil  else {
@@ -48,7 +50,7 @@ class DriverRankingModel {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
                 
-                let response = try decoder.decode(DriverRankingResponse.self, from: data!)
+                let response = try decoder.decode(CircuitsResponse.self, from: data!)
                 
                 // Ensure response.items is not nill to prevent crashes
                 if response.items != nil {
@@ -56,8 +58,10 @@ class DriverRankingModel {
                     // Call the main thread to pass the function through it
                     DispatchQueue.main.async {
                         
+                        dump(response.items)
+                        
                         // Call the "driversFetched" method of the delegate
-                        self.delegate?.driversFetched(response.items!)
+                        self.delegate?.circuitsFetched(response.items!)
                     }
                 
                 }
@@ -70,7 +74,6 @@ class DriverRankingModel {
             
             
         }.resume()
-        
     }
     
 }

@@ -7,13 +7,13 @@
 
 import UIKit
 
-class ImageLoader {
+extension UIImageView {
     
-    static func loadImage(from url: String, into imageView: UIImageView) {
+    func loadImage(from url: String) {
         
         // Save time by not fetching blank urls
         if url.isEmpty {
-            imageView.image = UIImage()
+            self.image = UIImage()
             return
         }
         
@@ -22,7 +22,7 @@ class ImageLoader {
         if let cachedData = ImageCacheManager.getImageCache(url) {
             
             // Return the thumbnailImageView from cache
-            imageView.image = UIImage(data: cachedData)
+            self.image = UIImage(data: cachedData)
         } else {
             // Convert Url string to URL object
             let imageUrl = URL(string: url)
@@ -44,7 +44,7 @@ class ImageLoader {
                     
                     // Set the image object to imageview in main thread
                     DispatchQueue.main.async {
-                        imageView.image = UIImage(data: data!)
+                        self.image = UIImage(data: data!)
                     }
                 }
                 
