@@ -72,6 +72,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="TJS-7F-ZKj">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fwM-Jf-oas">
                                 <rect key="frame" x="0.0" y="158" width="414" height="655"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -180,7 +183,9 @@
                         <viewLayoutGuide key="safeArea" id="aJf-mV-dea"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="TJS-7F-ZKj" firstAttribute="centerX" secondItem="nIN-OV-Zfs" secondAttribute="centerX" id="1FM-yd-Gwn"/>
                             <constraint firstItem="fwM-Jf-oas" firstAttribute="top" secondItem="Hrj-tB-YZs" secondAttribute="bottom" constant="10" id="2QJ-rc-JFo"/>
+                            <constraint firstItem="TJS-7F-ZKj" firstAttribute="centerY" secondItem="nIN-OV-Zfs" secondAttribute="centerY" id="Pw1-0x-y5L"/>
                             <constraint firstItem="fwM-Jf-oas" firstAttribute="bottom" secondItem="aJf-mV-dea" secondAttribute="bottom" id="Y2c-8Y-Y87"/>
                             <constraint firstItem="Hrj-tB-YZs" firstAttribute="centerX" secondItem="nIN-OV-Zfs" secondAttribute="centerX" id="g3i-6T-ENm"/>
                             <constraint firstItem="fwM-Jf-oas" firstAttribute="trailing" secondItem="aJf-mV-dea" secondAttribute="trailing" id="hes-4m-EKF"/>
@@ -190,6 +195,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Driver Rankings" id="cmG-0a-Qz1"/>
                     <connections>
+                        <outlet property="loadingIndicator" destination="TJS-7F-ZKj" id="B7e-gJ-zEe"/>
                         <outlet property="seasonsPopupButton" destination="VeE-pz-BcP" id="4A5-mV-mZT"/>
                         <outlet property="tableView" destination="fwM-Jf-oas" id="QFl-hz-zqk"/>
                     </connections>

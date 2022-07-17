@@ -9,6 +9,8 @@ import UIKit
 
 class DriversViewController: UIViewController {
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var seasonsPopupButton: UIButton!
@@ -40,6 +42,9 @@ class DriversViewController: UIViewController {
     }
     
     func fetchSelectedYearDrivers() {
+        
+        showIsLoading(isLoading: true)
+        
         // Initial network call
         model.getDriverRanking(year: "\(selectedYear)")
     }
@@ -50,6 +55,8 @@ class DriversViewController: UIViewController {
         
         let optionClosure = {(action: UIAction) in
             print(action.title)
+            
+            self.showIsLoading(isLoading: true)
             
             self.selectedYear = action.title
 
@@ -76,6 +83,22 @@ class DriversViewController: UIViewController {
         seasonsPopupButton.changesSelectionAsPrimaryAction = true
     }
 
+    
+    func showIsLoading(isLoading: Bool) {
+        if isLoading {
+            // Show progress indicator
+            loadingIndicator.isHidden = false
+            
+            // Hide table view
+            tableView.isHidden = true
+        } else {
+            // Show progress indicator
+            loadingIndicator.isHidden = true
+            
+            // Hide table view
+            tableView.isHidden = false
+        }
+    }
 }
 
 
@@ -83,6 +106,8 @@ class DriversViewController: UIViewController {
 
 extension DriversViewController: DriverRankingModelDelegate {
     func driversFetched(_ drivers: [DriverRankingItem]) {
+        
+        showIsLoading(isLoading: false)
         
         self.drivers = drivers
         
