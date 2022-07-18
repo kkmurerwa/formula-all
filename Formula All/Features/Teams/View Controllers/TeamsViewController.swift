@@ -1,0 +1,139 @@
+//
+//  TeamsViewController.swift
+//  Formula All
+//
+//  Created by Kenneth Murerwa on 18/07/2022.
+//
+
+import UIKit
+
+class TeamsViewController: UIViewController {
+    
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    @IBOutlet weak var seasonPopupButton: UIButton!
+    
+    var model = TeamRankingModel()
+    
+    var teams = [TeamRankingItem]()
+    
+    var selectedYear = "2022"
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        setPopupButton()
+        
+        // Set table view data source and delegate as the viewcontroller(self)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = 120
+        tableView.estimatedRowHeight = 120
+        
+        
+        // Set model delegate as viewcontroller(self)
+        model.delegate = self
+        
+        fetchSelectedYearTeams()
+        
+    }
+    
+    func fetchSelectedYearTeams() {
+        
+        showIsLoading(isLoading: true)
+        
+        // Initial network call
+        model.getTeamRankings(year: "\(selectedYear)")
+    }
+
+    func setPopupButton() {
+        
+        let optionClosure = {(action: UIAction) in
+            print(action.title)
+            
+            self.showIsLoading(isLoading: true)
+            
+            self.selectedYear = action.title
+
+            self.fetchSelectedYearTeams()
+        }
+        
+        seasonPopupButton.menu = UIMenu(children: [
+            UIAction(title: "2022", state: .on, handler: optionClosure),
+            UIAction(title: "2021", handler: optionClosure),
+            UIAction(title: "2020", handler: optionClosure),
+            UIAction(title: "2019", handler: optionClosure),
+            UIAction(title: "2018", handler: optionClosure),
+            UIAction(title: "2017", handler: optionClosure),
+            UIAction(title: "2016", handler: optionClosure),
+            UIAction(title: "2015", handler: optionClosure),
+            UIAction(title: "2014", handler: optionClosure),
+            UIAction(title: "2013", handler: optionClosure),
+            UIAction(title: "2012", handler: optionClosure),
+            UIAction(title: "2011", handler: optionClosure),
+        ])
+        
+        seasonPopupButton.showsMenuAsPrimaryAction = true
+        seasonPopupButton.changesSelectionAsPrimaryAction = true
+    }
+
+    
+    func showIsLoading(isLoading: Bool) {
+        if isLoading {
+            // Show progress indicator
+            loadingIndicator.isHidden = false
+            
+            // Hide table view
+            tableView.isHidden = true
+        } else {
+            // Show progress indicator
+            loadingIndicator.isHidden = true
+            
+            // Hide table view
+            tableView.isHidden = false
+        }
+    }
+}
+
+
+// MARK: - Driver ranking model delegate
+
+extension TeamsViewController: TeamRankingModelDelegate {
+    
+    func teamsFetched(_ teams: [TeamRankingItem]) {
+        showIsLoading(isLoading: false)
+        
+        self.teams = teams
+        
+        tableView.reloadData()
+    }
+}
+
+// MARK: - Table view methods
+
+extension TeamsViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return teams.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TEAM_CELL_ID, for: indexPath) as! TeamsTableViewCell
+        
+        
+        // Configure the cell with the data
+        
+        // Get title for current video
+        let team = self.teams[indexPath.row]
+        
+        cell.setDetails(team)
+        
+        // Return the cell for displaying
+        return cell
+    }
+    
+}
+
