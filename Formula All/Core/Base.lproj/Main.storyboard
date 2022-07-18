@@ -268,30 +268,31 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CircuitCell" id="4mN-WT-qM0" customClass="CircuitTableViewCell" customModule="Formula_All" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="191.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="302.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4mN-WT-qM0" id="JnY-79-eqI">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="191.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="302.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="v2T-FA-4A2">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="191.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="v2T-FA-4A2">
+                                                    <rect key="frame" x="0.0" y="10" width="414" height="282.5"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dWp-J8-pl0">
-                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="230"/>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="150" id="wtN-9o-RcZ"/>
+                                                                <constraint firstAttribute="height" constant="230" id="wtN-9o-RcZ"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEF-hX-Q3F">
-                                                            <rect key="frame" x="0.0" y="150" width="414" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LEF-hX-Q3F">
+                                                            <rect key="frame" x="0.0" y="235" width="414" height="22"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7f-tE-sPY">
-                                                            <rect key="frame" x="0.0" y="171" width="414" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h7f-tE-sPY">
+                                                            <rect key="frame" x="0.0" y="262" width="414" height="20.5"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -299,9 +300,9 @@
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="v2T-FA-4A2" firstAttribute="top" secondItem="JnY-79-eqI" secondAttribute="top" id="0Rk-SZ-7Mh"/>
+                                                <constraint firstItem="v2T-FA-4A2" firstAttribute="top" secondItem="JnY-79-eqI" secondAttribute="top" constant="10" id="0Rk-SZ-7Mh"/>
                                                 <constraint firstAttribute="trailing" secondItem="v2T-FA-4A2" secondAttribute="trailing" id="84N-zU-A23"/>
-                                                <constraint firstAttribute="bottom" secondItem="v2T-FA-4A2" secondAttribute="bottom" id="QLy-57-83Y"/>
+                                                <constraint firstAttribute="bottom" secondItem="v2T-FA-4A2" secondAttribute="bottom" constant="10" id="QLy-57-83Y"/>
                                                 <constraint firstItem="v2T-FA-4A2" firstAttribute="leading" secondItem="JnY-79-eqI" secondAttribute="leading" id="VWb-Xp-zhH"/>
                                             </constraints>
                                         </tableViewCellContentView>
