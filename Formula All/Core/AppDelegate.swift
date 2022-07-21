@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setUpGlobalViews() {
         
-        UINavigationBar.appearance().prefersLargeTitles = true
+//        UINavigationBar.appearance().prefersLargeTitles = true
         
     }
     

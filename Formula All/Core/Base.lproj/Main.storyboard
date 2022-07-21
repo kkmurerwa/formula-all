@@ -388,6 +388,51 @@
             </objects>
             <point key="canvasLocation" x="-1026.0869565217392" y="1062.7232142857142"/>
         </scene>
+        <!--Next Races View Controller-->
+        <scene sceneID="YtT-tc-75X">
+            <objects>
+                <viewController storyboardIdentifier="NextRaces" id="mnG-hr-oL1" customClass="NextRacesViewController" customModule="Formula_All" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Rco-iQ-G3x">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="2hC-4d-7gS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBP-ml-pB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-75" y="1856"/>
+        </scene>
+        <!--Previous Races View Controller-->
+        <scene sceneID="uuN-lC-wMx">
+            <objects>
+                <viewController storyboardIdentifier="PreviousRaces" id="opL-ds-Zcx" customClass="PreviousRacesViewController" customModule="Formula_All" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gfO-dW-1P4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="gsx-Oi-vYg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nxh-Lu-RHh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="880" y="1856"/>
+        </scene>
+        <!--Season Races View Controller-->
+        <scene sceneID="oo6-GN-wkM">
+            <objects>
+                <viewController storyboardIdentifier="SeasonRaces" id="Cr0-Tg-kL5" customClass="SeasonRacesViewController" customModule="Formula_All" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v0e-ES-0yG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="d3G-v7-vV3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AHh-KA-NxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1826" y="1856"/>
+        </scene>
         <!--Circuits-->
         <scene sceneID="wkR-jf-sMc">
             <objects>
@@ -469,14 +514,48 @@
         <!--Races-->
         <scene sceneID="guR-1E-V86">
             <objects>
-                <viewController id="DtO-kW-b5O" sceneMemberID="viewController">
+                <viewController id="DtO-kW-b5O" customClass="RaceTabsViewController" customModule="Formula_All" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZxM-4P-GjT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkX-7I-4yG">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="vOU-x2-bEB"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="kKX-aG-Gve"/>
+                            </scrollView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="32V-JE-HWf" customClass="ButtonBarView" customModule="XLPagerTabStrip">
+                                <rect key="frame" x="0.0" y="88" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Y7o-YW-s9Y"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="43f-hM-F0d">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="kU6-PJ-nxO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="32V-JE-HWf" firstAttribute="leading" secondItem="kU6-PJ-nxO" secondAttribute="leading" id="Baa-Ln-sV6"/>
+                            <constraint firstItem="kU6-PJ-nxO" firstAttribute="trailing" secondItem="JkX-7I-4yG" secondAttribute="trailing" id="Cxh-pD-MOn"/>
+                            <constraint firstItem="JkX-7I-4yG" firstAttribute="top" secondItem="kU6-PJ-nxO" secondAttribute="top" constant="50" id="Jw4-be-hGB"/>
+                            <constraint firstItem="32V-JE-HWf" firstAttribute="top" secondItem="kU6-PJ-nxO" secondAttribute="top" id="bzh-PE-myf"/>
+                            <constraint firstItem="JkX-7I-4yG" firstAttribute="leading" secondItem="kU6-PJ-nxO" secondAttribute="leading" id="h0N-Fr-u90"/>
+                            <constraint firstItem="kU6-PJ-nxO" firstAttribute="trailing" secondItem="32V-JE-HWf" secondAttribute="trailing" id="vmE-f4-npF"/>
+                            <constraint firstItem="kU6-PJ-nxO" firstAttribute="bottom" secondItem="JkX-7I-4yG" secondAttribute="bottom" id="zgT-pE-kdW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Races" id="fpz-fN-I63"/>
+                    <connections>
+                        <outlet property="buttonBarView" destination="32V-JE-HWf" id="xYA-ZI-fg4"/>
+                        <outlet property="containerView" destination="JkX-7I-4yG" id="97V-DW-7NK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhO-IR-dQt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

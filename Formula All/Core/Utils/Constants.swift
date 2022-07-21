@@ -13,4 +13,9 @@ class Constants {
     static let DRIVER_CELL_ID = "DriverCell"
     static let TEAM_CELL_ID = "TeamCell"
     
+    
+    // MARK: -> Storyboard IDs
+    static let NEXT_RACES_ID = "NextRaces"
+    static let PREVIOUS_RACES_ID = "PreviousRaces"
+    static let SEASON_RACES_ID = "SeasonRaces"
 }
