@@ -74,6 +74,40 @@ class Urls {
         return "\(API_URL)/races?season=\(forSeason)"
     }
     
+    static func RACES(
+        byId: Int? = nil,
+        ofType: String? = nil,
+        forSeason: String? = nil,
+        raceDate: Constants.RaceDate
+    ) -> String {
+        
+        let limit = 60
+        
+        let urlString = "\(API_URL)/races?"
+        
+        var params = [String]()
+        
+        if ofType != nil {
+            params.append("type=\(ofType!)")
+        }
+        
+        if forSeason != nil {
+            params.append("season=\(forSeason!)")
+        }
+         
+        switch raceDate {
+        case Constants.RaceDate.next:
+            params.append("next=\(limit)")
+        case Constants.RaceDate.previous:
+            params.append("previous=\(limit)")
+        default: break
+        }
+        
+        let joined = params.joined(separator: "&")
+        
+        return urlString + joined
+    }
+    
     
     // MARK: - Circuits URLs
     static let CIRCUITS_URL = "\(API_URL)/circuits"

@@ -58,7 +58,7 @@ extension CircuitsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // Get a CardCollectionViewCell object
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CIRCUIT_CELL_ID, for: indexPath) as! CircuitTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.CIRCUIT_CELL_ID, for: indexPath) as! CircuitTableViewCell
         
         // Get the card that the collection view is trying to display
         let circuit = circuits[indexPath.row]

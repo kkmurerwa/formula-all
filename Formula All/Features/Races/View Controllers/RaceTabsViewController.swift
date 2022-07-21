@@ -17,9 +17,9 @@ class RaceTabsViewController: ButtonBarPagerTabStripViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let child_1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.NEXT_RACES_ID)
-        let child_2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.PREVIOUS_RACES_ID)
-        let child_3 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.SEASON_RACES_ID)
+        let child_1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardIDs.NEXT_RACES_ID)
+        let child_2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardIDs.PREVIOUS_RACES_ID)
+        let child_3 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardIDs.SEASON_RACES_ID)
         
         return [child_1, child_2, child_3]
     }

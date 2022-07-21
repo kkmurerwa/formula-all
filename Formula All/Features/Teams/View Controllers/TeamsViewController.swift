@@ -121,7 +121,7 @@ extension TeamsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TEAM_CELL_ID, for: indexPath) as! TeamsTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.TEAM_CELL_ID, for: indexPath) as! TeamsTableViewCell
         
         
         // Configure the cell with the data

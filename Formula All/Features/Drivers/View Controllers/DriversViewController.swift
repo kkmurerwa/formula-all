@@ -38,7 +38,7 @@ class DriversViewController: UIViewController {
         // Set model delegate as viewcontroller(self)
         model.delegate = self
         
-        fetchSelectedYearDrivers()
+//        fetchSelectedYearDrivers()
     }
     
     func fetchSelectedYearDrivers() {
@@ -127,7 +127,7 @@ extension DriversViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.DRIVER_CELL_ID, for: indexPath) as! DriverTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.DRIVER_CELL_ID, for: indexPath) as! DriverTableViewCell
         
         
         // Configure the cell with the data

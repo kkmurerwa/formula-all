@@ -9,11 +9,20 @@ import UIKit
 import XLPagerTabStrip
 
 class NextRacesViewController: UIViewController {
+    
+    
+    var model = RaceItemsModel()
+    
+    var races = [RaceItem]()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
+        model.delegate = self
+        
+        model.fetchRaces(byId: nil, ofType: Constants.RaceTypes.PRACTICE_1, forSeason: nil, raceDate: .next)
     }
 
 }
@@ -24,5 +33,17 @@ class NextRacesViewController: UIViewController {
 extension NextRacesViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Next Races")
+    }
+}
+
+
+// MARK: - Driver ranking model delegate
+
+extension NextRacesViewController: RaceItemsModelDelegate {
+    func racesFetched(_ races: [RaceItem]) {
+        
+        self.races = races
+        
+        dump(races)
     }
 }

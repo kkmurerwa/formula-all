@@ -35,6 +35,11 @@
 		F532329F2889CFBE004D7557 /* NextRacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F532329E2889CFBE004D7557 /* NextRacesViewController.swift */; };
 		F53232A12889CFFB004D7557 /* PreviousRacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53232A02889CFFB004D7557 /* PreviousRacesViewController.swift */; };
 		F53232A32889D007004D7557 /* SeasonRacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53232A22889D007004D7557 /* SeasonRacesViewController.swift */; };
+		F53232A52889DAC0004D7557 /* RaceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53232A42889DAC0004D7557 /* RaceItem.swift */; };
+		F53232A92889DBDD004D7557 /* RaceItemCircuit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53232A82889DBDD004D7557 /* RaceItemCircuit.swift */; };
+		F53232AB2889DC41004D7557 /* RaceItemLaps.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53232AA2889DC41004D7557 /* RaceItemLaps.swift */; };
+		F53232AD2889DC91004D7557 /* FastestLap.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53232AC2889DC91004D7557 /* FastestLap.swift */; };
+		F53232AF2889DCC8004D7557 /* FastestLapDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = F53232AE2889DCC8004D7557 /* FastestLapDriver.swift */; };
 		F55EBAA32879930A00FD6F59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55EBAA22879930A00FD6F59 /* AppDelegate.swift */; };
 		F55EBAA52879930A00FD6F59 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F55EBAA42879930A00FD6F59 /* SceneDelegate.swift */; };
 		F55EBAAA2879930A00FD6F59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F55EBAA82879930A00FD6F59 /* Main.storyboard */; };
@@ -49,6 +54,9 @@
 		F5A059282884913F008428FA /* CircuitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A059272884913F008428FA /* CircuitsViewController.swift */; };
 		F5A0592A288491A2008428FA /* CircuitsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05929288491A2008428FA /* CircuitsResponse.swift */; };
 		F5A0592C288491DD008428FA /* CircuitItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0592B288491DD008428FA /* CircuitItem.swift */; };
+		F5D509732889E089008530D5 /* RaceItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509722889E089008530D5 /* RaceItemsResponse.swift */; };
+		F5D509752889E0DA008530D5 /* RaceItemsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509742889E0DA008530D5 /* RaceItemsDelegate.swift */; };
+		F5D509772889E12E008530D5 /* RaceItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509762889E12E008530D5 /* RaceItemsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -82,6 +90,11 @@
 		F532329E2889CFBE004D7557 /* NextRacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextRacesViewController.swift; sourceTree = "<group>"; };
 		F53232A02889CFFB004D7557 /* PreviousRacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviousRacesViewController.swift; sourceTree = "<group>"; };
 		F53232A22889D007004D7557 /* SeasonRacesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonRacesViewController.swift; sourceTree = "<group>"; };
+		F53232A42889DAC0004D7557 /* RaceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItem.swift; sourceTree = "<group>"; };
+		F53232A82889DBDD004D7557 /* RaceItemCircuit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemCircuit.swift; sourceTree = "<group>"; };
+		F53232AA2889DC41004D7557 /* RaceItemLaps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemLaps.swift; sourceTree = "<group>"; };
+		F53232AC2889DC91004D7557 /* FastestLap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastestLap.swift; sourceTree = "<group>"; };
+		F53232AE2889DCC8004D7557 /* FastestLapDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FastestLapDriver.swift; sourceTree = "<group>"; };
 		F55EBA9F2879930A00FD6F59 /* Formula All.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Formula All.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F55EBAA22879930A00FD6F59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F55EBAA42879930A00FD6F59 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +111,9 @@
 		F5A059272884913F008428FA /* CircuitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsViewController.swift; sourceTree = "<group>"; };
 		F5A05929288491A2008428FA /* CircuitsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsResponse.swift; sourceTree = "<group>"; };
 		F5A0592B288491DD008428FA /* CircuitItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitItem.swift; sourceTree = "<group>"; };
+		F5D509722889E089008530D5 /* RaceItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsResponse.swift; sourceTree = "<group>"; };
+		F5D509742889E0DA008530D5 /* RaceItemsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsDelegate.swift; sourceTree = "<group>"; };
+		F5D509762889E12E008530D5 /* RaceItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -352,6 +368,7 @@
 		F5A059142884830F008428FA /* Delegates */ = {
 			isa = PBXGroup;
 			children = (
+				F5D509742889E0DA008530D5 /* RaceItemsDelegate.swift */,
 			);
 			path = Delegates;
 			sourceTree = "<group>";
@@ -359,6 +376,13 @@
 		F5A0591528848318008428FA /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				F53232A42889DAC0004D7557 /* RaceItem.swift */,
+				F53232A82889DBDD004D7557 /* RaceItemCircuit.swift */,
+				F53232AA2889DC41004D7557 /* RaceItemLaps.swift */,
+				F53232AC2889DC91004D7557 /* FastestLap.swift */,
+				F53232AE2889DCC8004D7557 /* FastestLapDriver.swift */,
+				F5D509722889E089008530D5 /* RaceItemsResponse.swift */,
+				F5D509762889E12E008530D5 /* RaceItemsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -541,6 +565,7 @@
 				F505D6992879E9E700EFB31F /* DriverRankingModelDelegate.swift in Sources */,
 				F53232A12889CFFB004D7557 /* PreviousRacesViewController.swift in Sources */,
 				F51C3C0D28849A080070D84B /* CircuitCompetition.swift in Sources */,
+				F53232AB2889DC41004D7557 /* RaceItemLaps.swift in Sources */,
 				F51C3C172884A51F0070D84B /* Constants.swift in Sources */,
 				F505D69B2879EA5400EFB31F /* DriverRankingModel.swift in Sources */,
 				F5A059192884833D008428FA /* TabsView.swift in Sources */,
@@ -551,25 +576,32 @@
 				F532329F2889CFBE004D7557 /* NextRacesViewController.swift in Sources */,
 				F505D6932879D98A00EFB31F /* DriverRankingDriverInfo.swift in Sources */,
 				F505D68D2879D2EE00EFB31F /* ImageCacheManager.swift in Sources */,
+				F5D509772889E12E008530D5 /* RaceItemsModel.swift in Sources */,
 				F53232A32889D007004D7557 /* SeasonRacesViewController.swift in Sources */,
 				F51C3C252885582D0070D84B /* TeamRankingResponse.swift in Sources */,
 				F51C3C1328849EBD0070D84B /* CircuitsModelDelegate.swift in Sources */,
 				F51C3C21288556A10070D84B /* TeamRankingItem.swift in Sources */,
 				F5A0592A288491A2008428FA /* CircuitsResponse.swift in Sources */,
+				F53232A92889DBDD004D7557 /* RaceItemCircuit.swift in Sources */,
 				F505D68B2879D2C400EFB31F /* ImageLoader.swift in Sources */,
 				F51C3C0F28849A3D0070D84B /* CircuitLocation.swift in Sources */,
 				F505D69D2879EB6800EFB31F /* DriversViewController.swift in Sources */,
+				F53232A52889DAC0004D7557 /* RaceItem.swift in Sources */,
 				F5A0591D28848466008428FA /* RaceTabsViewController.swift in Sources */,
 				F5A0591B28848380008428FA /* TabCell.swift in Sources */,
+				F5D509752889E0DA008530D5 /* RaceItemsDelegate.swift in Sources */,
 				F55EBAA52879930A00FD6F59 /* SceneDelegate.swift in Sources */,
 				F51C3C2B28855B790070D84B /* TeamsViewController.swift in Sources */,
 				F51C3C29288559600070D84B /* TeamRankingModelDelegate.swift in Sources */,
 				F5A0590E2882CE3D008428FA /* RoundedImageView.swift in Sources */,
+				F53232AF2889DCC8004D7557 /* FastestLapDriver.swift in Sources */,
+				F5D509732889E089008530D5 /* RaceItemsResponse.swift in Sources */,
 				F505D6912879D92D00EFB31F /* DriverRankingResponse.swift in Sources */,
 				F505D6952879D9E600EFB31F /* DriverRankingTeamInfo.swift in Sources */,
 				F5A0592C288491DD008428FA /* CircuitItem.swift in Sources */,
 				F51C3C1528849F120070D84B /* CircuitsModel.swift in Sources */,
 				F51C3C23288556DB0070D84B /* TeamRankingItemDetails.swift in Sources */,
+				F53232AD2889DC91004D7557 /* FastestLap.swift in Sources */,
 				F505D6A02879F70F00EFB31F /* DriverTableViewCell.swift in Sources */,
 				F51C3C1128849BAF0070D84B /* CircuitLapRecord.swift in Sources */,
 				F51C3C27288558B80070D84B /* TeamRankingModel.swift in Sources */,
