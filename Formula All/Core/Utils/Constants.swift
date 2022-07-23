@@ -16,6 +16,7 @@ struct Constants {
         static let CIRCUIT_CELL_ID = "CircuitCell"
         static let DRIVER_CELL_ID = "DriverCell"
         static let TEAM_CELL_ID = "TeamCell"
+        static let RACE_CELL_ID = "RaceCell"
     }
     
     

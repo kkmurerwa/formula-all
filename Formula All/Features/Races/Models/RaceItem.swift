@@ -17,7 +17,7 @@ struct RaceItem: Decodable {
     let fastest_lap: FastestLap
     let distance: String?
     let timezone: String
-    let date: String
+    let date: Date
     let weather: String?
     let status: String
     
@@ -48,7 +48,7 @@ struct RaceItem: Decodable {
         self.fastest_lap = try container.decode(FastestLap.self, forKey: .fastest_lap)
         self.distance = try? container.decode(String.self, forKey: .distance)
         self.timezone = try container.decode(String.self, forKey: .timezone)
-        self.date = try container.decode(String.self, forKey: .date)
+        self.date = try container.decode(Date.self, forKey: .date)
         self.weather = try? container.decode(String.self, forKey: .weather)
         self.status = try container.decode(String.self, forKey: .status)
     }
