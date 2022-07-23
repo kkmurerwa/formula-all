@@ -10,10 +10,27 @@ import XLPagerTabStrip
 
 class PreviousRacesViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
+    var model = RaceItemsModel()
+    
+    var races = [RaceItem]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Set table view data source and delegate as the viewcontroller(self)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.rowHeight = 120
+        tableView.estimatedRowHeight = 120
+        
+        model.delegate = self
+        
+        // Previous races requires season
+        let currentYear = Date().convertDate(withFormat: "YYYY")
+        
+        model.fetchRaces(byId: nil, ofType: Constants.RaceTypes.PRACTICE_1, forSeason: currentYear, raceDate: .previous)
     }
 }
 
@@ -23,5 +40,44 @@ class PreviousRacesViewController: UIViewController {
 extension PreviousRacesViewController: IndicatorInfoProvider {
     func indicatorInfo(for pagerTabStripController: PagerTabStripViewController) -> IndicatorInfo {
         return IndicatorInfo(title: "Previous Races")
+    }
+}
+
+
+// MARK: - Driver ranking model delegate
+
+extension PreviousRacesViewController: RaceItemsModelDelegate {
+    func racesFetched(_ races: [RaceItem]) {
+        
+        self.races = races
+        
+        dump(races)
+        
+        tableView.reloadData()
+    }
+}
+
+
+// MARK: -> Table View Methods
+
+extension PreviousRacesViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return races.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.RACE_CELL_ID, for: indexPath) as! RaceTableViewCell
+        
+        
+        // Configure the cell with the data
+        
+        // Get title for current race
+        let race = self.races[indexPath.row]
+        
+        cell.setDetails(race)
+        
+        // Return the cell for displaying
+        return cell
     }
 }

@@ -99,7 +99,7 @@ class Urls {
         case Constants.RaceDate.next:
             params.append("next=\(limit)")
         case Constants.RaceDate.previous:
-            params.append("previous=\(limit)")
+            params.append("last=\(limit)")
         default: break
         }
         
