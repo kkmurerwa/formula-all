@@ -11,6 +11,8 @@ class CircuitsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     var model = CircuitsModel()
     
     var circuits = [CircuitItem]()
@@ -30,6 +32,23 @@ class CircuitsViewController: UIViewController {
         // Fetch circuits
         model.getCircuits()
   
+        showIsLoading(isLoading: true)
+    }
+    
+    func showIsLoading(isLoading: Bool) {
+        if isLoading {
+            // Show progress indicator
+            loadingIndicator.isHidden = false
+            
+            // Hide table view
+            tableView.isHidden = true
+        } else {
+            // Show progress indicator
+            loadingIndicator.isHidden = true
+            
+            // Hide table view
+            tableView.isHidden = false
+        }
     }
 
 }
@@ -41,6 +60,8 @@ extension CircuitsViewController: CircuitsModelDelegate {
     
     func circuitsFetched(_ circuits: [CircuitItem]) {
         self.circuits = circuits
+        
+        showIsLoading(isLoading: false)
         
         tableView.reloadData()
     }

@@ -12,6 +12,8 @@ class NextRacesViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     var model = RaceItemsModel()
     
     var races = [RaceItem]()
@@ -27,9 +29,32 @@ class NextRacesViewController: UIViewController {
         
         model.delegate = self
         
-        model.fetchRaces(byId: nil, ofType: Constants.RaceTypes.PRACTICE_1, forSeason: nil, raceDate: .next)
+        model.fetchRaces(
+            byId: nil,
+            ofType: Constants.RaceTypes.PRACTICE_1,
+            forSeason: nil,
+            raceDate: .next
+        )
+        
+        showIsLoading(isLoading: true)
     }
 
+    func showIsLoading(isLoading: Bool) {
+        if isLoading {
+            // Show progress indicator
+            loadingIndicator.isHidden = false
+            
+            // Hide table view
+            tableView.isHidden = true
+        } else {
+            // Show progress indicator
+            loadingIndicator.isHidden = true
+            
+            // Hide table view
+            tableView.isHidden = false
+        }
+    }
+    
 }
 
 
@@ -49,7 +74,7 @@ extension NextRacesViewController: RaceItemsModelDelegate {
         
         self.races = races
         
-        dump(races)
+        showIsLoading(isLoading: false)
         
         tableView.reloadData()
     }

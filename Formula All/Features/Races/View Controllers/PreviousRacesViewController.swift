@@ -12,6 +12,8 @@ class PreviousRacesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    
     var model = RaceItemsModel()
     
     var races = [RaceItem]()
@@ -30,8 +32,32 @@ class PreviousRacesViewController: UIViewController {
         // Previous races requires season
         let currentYear = Date().convertDate(withFormat: "YYYY")
         
-        model.fetchRaces(byId: nil, ofType: Constants.RaceTypes.PRACTICE_1, forSeason: currentYear, raceDate: .previous)
+        model.fetchRaces(
+            byId: nil,
+            ofType: Constants.RaceTypes.PRACTICE_1,
+            forSeason: currentYear,
+            raceDate: .previous
+        )
+        
+        showIsLoading(isLoading: true)
     }
+    
+    func showIsLoading(isLoading: Bool) {
+        if isLoading {
+            // Show progress indicator
+            loadingIndicator.isHidden = false
+            
+            // Hide table view
+            tableView.isHidden = true
+        } else {
+            // Show progress indicator
+            loadingIndicator.isHidden = true
+            
+            // Hide table view
+            tableView.isHidden = false
+        }
+    }
+    
 }
 
 
@@ -51,7 +77,7 @@ extension PreviousRacesViewController: RaceItemsModelDelegate {
         
         self.races = races
         
-        dump(races)
+        showIsLoading(isLoading: false)
         
         tableView.reloadData()
     }

@@ -87,18 +87,18 @@ class Urls {
         
         var params = [String]()
         
-        if ofType != nil {
-            params.append("type=\(ofType!)")
+        if let type = ofType {
+            params.append("type=\(type)")
         }
         
-        if forSeason != nil {
-            params.append("season=\(forSeason!)")
+        if let season = forSeason {
+            params.append("season=\(season)")
         }
          
         switch raceDate {
-        case Constants.RaceDate.next:
+        case .next:
             params.append("next=\(limit)")
-        case Constants.RaceDate.previous:
+        case .previous:
             params.append("last=\(limit)")
         default: break
         }
