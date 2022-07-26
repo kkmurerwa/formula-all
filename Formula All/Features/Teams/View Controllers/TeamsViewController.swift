@@ -60,20 +60,24 @@ class TeamsViewController: UIViewController {
             self.fetchSelectedYearTeams()
         }
         
-        seasonPopupButton.menu = UIMenu(children: [
-            UIAction(title: "2022", state: .on, handler: optionClosure),
-            UIAction(title: "2021", handler: optionClosure),
-            UIAction(title: "2020", handler: optionClosure),
-            UIAction(title: "2019", handler: optionClosure),
-            UIAction(title: "2018", handler: optionClosure),
-            UIAction(title: "2017", handler: optionClosure),
-            UIAction(title: "2016", handler: optionClosure),
-            UIAction(title: "2015", handler: optionClosure),
-            UIAction(title: "2014", handler: optionClosure),
-            UIAction(title: "2013", handler: optionClosure),
-            UIAction(title: "2012", handler: optionClosure),
-            UIAction(title: "2011", handler: optionClosure),
-        ])
+        let supportedYears = SupportedYearsModel().getSupportedYears()
+        
+        var optionsArray = [UIAction]()
+
+        // Loop and populate the actions array
+        for (index, year) in supportedYears.enumerated() {
+            // Create each action and insert the right country as a title
+            let action = UIAction(
+                title: year,
+                state: index == 0 ? .on : .off,
+                handler: optionClosure
+            )
+                    
+            // Add newly created action to actions array
+            optionsArray.append(action)
+        }
+        
+        seasonPopupButton.menu = UIMenu(children: optionsArray)
         
         seasonPopupButton.showsMenuAsPrimaryAction = true
         seasonPopupButton.changesSelectionAsPrimaryAction = true

@@ -57,6 +57,7 @@
 		F5D509732889E089008530D5 /* RaceItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509722889E089008530D5 /* RaceItemsResponse.swift */; };
 		F5D509752889E0DA008530D5 /* RaceItemsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509742889E0DA008530D5 /* RaceItemsDelegate.swift */; };
 		F5D509772889E12E008530D5 /* RaceItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509762889E12E008530D5 /* RaceItemsModel.swift */; };
+		F5EBBB64289064FC007F24F5 /* SupportedYearsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EBBB63289064FC007F24F5 /* SupportedYearsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +115,7 @@
 		F5D509722889E089008530D5 /* RaceItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsResponse.swift; sourceTree = "<group>"; };
 		F5D509742889E0DA008530D5 /* RaceItemsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsDelegate.swift; sourceTree = "<group>"; };
 		F5D509762889E12E008530D5 /* RaceItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsModel.swift; sourceTree = "<group>"; };
+		F5EBBB63289064FC007F24F5 /* SupportedYearsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedYearsModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -288,6 +290,7 @@
 		F55EBAB72879931F00FD6F59 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F5EBBB62289064EC007F24F5 /* Models */,
 				F51C3C182884AC4A0070D84B /* Extensions */,
 				F505D6872879D25800EFB31F /* Utils */,
 				F505D6862879D1FB00EFB31F /* Network */,
@@ -444,6 +447,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		F5EBBB62289064EC007F24F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F5EBBB63289064FC007F24F5 /* SupportedYearsModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -566,6 +577,7 @@
 				F53232A12889CFFB004D7557 /* PreviousRacesViewController.swift in Sources */,
 				F51C3C0D28849A080070D84B /* CircuitCompetition.swift in Sources */,
 				F53232AB2889DC41004D7557 /* RaceItemLaps.swift in Sources */,
+				F5EBBB64289064FC007F24F5 /* SupportedYearsModel.swift in Sources */,
 				F51C3C172884A51F0070D84B /* Constants.swift in Sources */,
 				F505D69B2879EA5400EFB31F /* DriverRankingModel.swift in Sources */,
 				F51C3C1F288555FF0070D84B /* TeamsTableViewCell.swift in Sources */,
