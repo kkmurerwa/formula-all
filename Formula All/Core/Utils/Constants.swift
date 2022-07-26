@@ -29,6 +29,15 @@ struct Constants {
     }
     
     
+    // MARK: -> Segues
+    
+    struct Segues {
+        static let showNextRaceDetails = "nextRaceDetails"
+        static let showPreviousRaceDetails = "previousRaceDetails"
+        static let showAllRaceItemDetails = "allRaceItemDetails"
+    }
+    
+    
     // MARK: -> Race Params
     
     struct RaceTypes {

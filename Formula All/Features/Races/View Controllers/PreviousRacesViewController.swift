@@ -58,6 +58,27 @@ class PreviousRacesViewController: UIViewController {
         }
     }
     
+    
+    // MARK: - Segue methods
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Make sure that a character was selected
+        guard tableView.indexPathForSelectedRow != nil else {
+            return
+        }
+        
+        // Get a reference to the character that was tapped on
+        let selectedRace = races[tableView.indexPathForSelectedRow!.row]
+    
+        // Get a reference to the detail view controller
+        let detailViewController = segue.destination as! RaceDetailsViewController
+        
+        // Set the character property of the detail view controller
+        detailViewController.raceItem = selectedRace
+        
+    }
+    
 }
 
 

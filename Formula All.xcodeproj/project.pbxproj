@@ -58,6 +58,7 @@
 		F5D509752889E0DA008530D5 /* RaceItemsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509742889E0DA008530D5 /* RaceItemsDelegate.swift */; };
 		F5D509772889E12E008530D5 /* RaceItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509762889E12E008530D5 /* RaceItemsModel.swift */; };
 		F5EBBB64289064FC007F24F5 /* SupportedYearsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EBBB63289064FC007F24F5 /* SupportedYearsModel.swift */; };
+		F5EBBB67289069FB007F24F5 /* RaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EBBB66289069FB007F24F5 /* RaceDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +117,7 @@
 		F5D509742889E0DA008530D5 /* RaceItemsDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsDelegate.swift; sourceTree = "<group>"; };
 		F5D509762889E12E008530D5 /* RaceItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsModel.swift; sourceTree = "<group>"; };
 		F5EBBB63289064FC007F24F5 /* SupportedYearsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedYearsModel.swift; sourceTree = "<group>"; };
+		F5EBBB66289069FB007F24F5 /* RaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -398,6 +400,7 @@
 				F532329E2889CFBE004D7557 /* NextRacesViewController.swift */,
 				F53232A02889CFFB004D7557 /* PreviousRacesViewController.swift */,
 				F53232A22889D007004D7557 /* SeasonRacesViewController.swift */,
+				F5EBBB66289069FB007F24F5 /* RaceDetailsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				F505D6952879D9E600EFB31F /* DriverRankingTeamInfo.swift in Sources */,
 				F5A0592C288491DD008428FA /* CircuitItem.swift in Sources */,
 				F51C3C1528849F120070D84B /* CircuitsModel.swift in Sources */,
+				F5EBBB67289069FB007F24F5 /* RaceDetailsViewController.swift in Sources */,
 				F51C3C23288556DB0070D84B /* TeamRankingItemDetails.swift in Sources */,
 				F53232AD2889DC91004D7557 /* FastestLap.swift in Sources */,
 				F505D6A02879F70F00EFB31F /* DriverTableViewCell.swift in Sources */,
