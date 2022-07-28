@@ -35,8 +35,8 @@
             <objects>
                 <navigationController id="KbM-DG-rzO" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Circuits" image="race-track" id="Ehh-wU-j45"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hyd-8u-anW">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="hyd-8u-anW">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -52,8 +52,8 @@
             <objects>
                 <navigationController id="Xbd-yP-mby" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Drivers" image="helmet" id="jwI-dV-geK"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Nbq-6s-EvF">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Nbq-6s-EvF">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -69,8 +69,8 @@
             <objects>
                 <navigationController id="R4Z-Vs-Qro" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Teams" image="f1-car" id="zET-8N-RHB"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4hM-gP-rbp">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="4hM-gP-rbp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -123,11 +123,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="TJS-7F-ZKj">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fwM-Jf-oas">
-                                <rect key="frame" x="0.0" y="158" width="414" height="655"/>
+                                <rect key="frame" x="0.0" y="148" width="414" height="665"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="DriverCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverCell" id="nn5-Q2-8jX" customClass="DriverTableViewCell" customModule="Formula_All" customModuleProvider="target">
@@ -199,8 +196,11 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="TJS-7F-ZKj">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Hrj-tB-YZs">
-                                <rect key="frame" x="124" y="108" width="166" height="40"/>
+                                <rect key="frame" x="124" y="98" width="166" height="40"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QoA-YG-Zhb">
                                         <rect key="frame" x="0.0" y="0.0" width="83" height="40"/>
@@ -240,7 +240,7 @@
                             <constraint firstItem="fwM-Jf-oas" firstAttribute="bottom" secondItem="aJf-mV-dea" secondAttribute="bottom" id="Y2c-8Y-Y87"/>
                             <constraint firstItem="Hrj-tB-YZs" firstAttribute="centerX" secondItem="nIN-OV-Zfs" secondAttribute="centerX" id="g3i-6T-ENm"/>
                             <constraint firstItem="fwM-Jf-oas" firstAttribute="trailing" secondItem="aJf-mV-dea" secondAttribute="trailing" id="hes-4m-EKF"/>
-                            <constraint firstItem="Hrj-tB-YZs" firstAttribute="top" secondItem="aJf-mV-dea" secondAttribute="top" constant="20" id="jWH-bw-8no"/>
+                            <constraint firstItem="Hrj-tB-YZs" firstAttribute="top" secondItem="aJf-mV-dea" secondAttribute="top" constant="10" id="jWH-bw-8no"/>
                             <constraint firstItem="fwM-Jf-oas" firstAttribute="leading" secondItem="aJf-mV-dea" secondAttribute="leading" id="xxh-fc-PCC"/>
                         </constraints>
                     </view>
@@ -263,9 +263,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="TG5-xf-Onc">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FWS-tO-O3I">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -317,6 +314,9 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="TG5-xf-Onc">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Nr7-0X-dUB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -347,40 +347,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="szP-dH-RXu">
-                                <rect key="frame" x="124" y="98" width="166" height="40"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46p-gf-gyV">
-                                        <rect key="frame" x="0.0" y="0.0" width="83" height="40"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgh-vs-fIE">
-                                        <rect key="frame" x="83" y="0.0" width="83" height="40"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="nGw-no-jmy"/>
-                                        </constraints>
-                                        <menu key="menu" id="M8J-sb-Tuf">
-                                            <children>
-                                                <command title="2022" id="7zI-ip-mpq"/>
-                                                <command title="2021" id="5iR-jc-E9T"/>
-                                            </children>
-                                        </menu>
-                                        <state key="normal" title="Season 2022">
-                                            <color key="titleColor" systemColor="labelColor"/>
-                                        </state>
-                                        <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="2022" imagePadding="10" titleAlignment="leading">
-                                            <imageReference key="image" image="chevron.down" catalog="system" symbolScale="default"/>
-                                            <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
-                                        </buttonConfiguration>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </stackView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="okq-X4-WXq">
-                                <rect key="frame" x="197" y="438" width="20" height="20"/>
-                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="025-G1-ZON">
                                 <rect key="frame" x="0.0" y="148" width="414" height="665"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -447,6 +413,40 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="szP-dH-RXu">
+                                <rect key="frame" x="124" y="98" width="166" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Season" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="46p-gf-gyV">
+                                        <rect key="frame" x="0.0" y="0.0" width="83" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgh-vs-fIE">
+                                        <rect key="frame" x="83" y="0.0" width="83" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="nGw-no-jmy"/>
+                                        </constraints>
+                                        <menu key="menu" id="M8J-sb-Tuf">
+                                            <children>
+                                                <command title="2022" id="7zI-ip-mpq"/>
+                                                <command title="2021" id="5iR-jc-E9T"/>
+                                            </children>
+                                        </menu>
+                                        <state key="normal" title="Season 2022">
+                                            <color key="titleColor" systemColor="labelColor"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="filled" imagePlacement="trailing" title="2022" imagePadding="10" titleAlignment="leading">
+                                            <imageReference key="image" image="chevron.down" catalog="system" symbolScale="default"/>
+                                            <color key="baseBackgroundColor" systemColor="systemBlueColor"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="okq-X4-WXq">
+                                <rect key="frame" x="197" y="438" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rwl-Bx-Sje"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
