@@ -74,6 +74,35 @@ class RaceDetailsViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = false
     }
     
+    
+    // MARK: - Segue methods
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Make sure that a video was selected
+        guard scheduleTableView.indexPathForSelectedRow != nil else {
+            return
+        }
+        
+        
+        if segue.identifier == Constants.Segues.showRaceResults {
+            if segue.destination is RaceResultsViewController {
+                
+                // Get a reference to the video that was tapped on
+                let selectedRace = races[scheduleTableView.indexPathForSelectedRow!.row]
+                
+            
+                // Get a reference to the detail view controller
+                let raceResultsViewController = segue.destination as! RaceResultsViewController
+                
+                
+                // Set the video property of the detail view controller
+                raceResultsViewController.selectedRace = selectedRace
+                
+            }
+        }
+    }
+    
 }
 
 
@@ -116,6 +145,6 @@ extension RaceDetailsViewController: UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        performSegue(withIdentifier: Constants.Segues.showRaceResults, sender: nil)
     }
 }

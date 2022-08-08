@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TeamRankingItemDetails: Decodable {
+struct TeamDetails: Decodable {
     let id: Int
     let name: String
     let logo: String

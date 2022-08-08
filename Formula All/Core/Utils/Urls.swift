@@ -117,6 +117,11 @@ class Urls {
         return urlString + joined
     }
     
+    static func RACE_RESULTS(
+        forRace: Int
+    ) -> String {
+        return "\(API_URL)/rankings/races?race=\(forRace)"
+    }
     
     // MARK: - Circuits URLs
     static let CIRCUITS_URL = "\(API_URL)/circuits"

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DriverRankingDriverInfo: Decodable {
+struct DriverInfo: Decodable {
     
     let id: Int?
     let name: String?

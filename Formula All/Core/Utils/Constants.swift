@@ -18,6 +18,8 @@ struct Constants {
         static let TEAM_CELL_ID = "TeamCell"
         static let RACE_CELL_ID = "RaceCell"
         static let RACE_SCHEDULE_ID = "RaceScheduleCell"
+        static let RACERS_TABLE_TITLE_ID = "TableTitleCell"
+        static let RACERS_TABLE_DRIVER_ID = "RaceDriverCell"
     }
     
     
@@ -37,6 +39,7 @@ struct Constants {
         static let showNextRaceDetails = "nextRaceDetails"
         static let showPreviousRaceDetails = "previousRaceDetails"
         static let showAllRaceItemDetails = "allRaceItemDetails"
+        static let showRaceResults = "RaceResults"
     }
     
     

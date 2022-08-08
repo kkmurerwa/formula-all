@@ -9,7 +9,7 @@ import Foundation
 
 struct TeamRankingItem: Decodable {
     let position: Int
-    let team: TeamRankingItemDetails
+    let team: TeamDetails
     let points: Int?
     let season: Int
     
@@ -24,7 +24,7 @@ struct TeamRankingItem: Decodable {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         
         self.position = try container.decode(Int.self, forKey: .position)
-        self.team = try container.decode(TeamRankingItemDetails.self, forKey: .team)
+        self.team = try container.decode(TeamDetails.self, forKey: .team)
         self.points = try? container.decode(Int.self, forKey: .points)
         self.season = try container.decode(Int.self, forKey: .season)
     }
