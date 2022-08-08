@@ -18,6 +18,8 @@ class PreviousRacesViewController: UIViewController {
     
     var races = [RaceItem]()
     
+    var racesDelegate: RacesViewControllerDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -57,28 +59,6 @@ class PreviousRacesViewController: UIViewController {
             tableView.isHidden = false
         }
     }
-    
-    
-    // MARK: - Segue methods
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        // Make sure that a character was selected
-        guard tableView.indexPathForSelectedRow != nil else {
-            return
-        }
-        
-        // Get a reference to the character that was tapped on
-        let selectedRace = races[tableView.indexPathForSelectedRow!.row]
-    
-        // Get a reference to the detail view controller
-        let detailViewController = segue.destination as! RaceDetailsViewController
-        
-        // Set the character property of the detail view controller
-        detailViewController.raceItem = selectedRace
-        
-    }
-    
 }
 
 
@@ -126,5 +106,21 @@ extension PreviousRacesViewController: UITableViewDelegate, UITableViewDataSourc
         
         // Return the cell for displaying
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        print("Calling navigation delegate")
+        
+        // Make sure that a character was selected
+        guard tableView.indexPathForSelectedRow != nil else {
+            print("Selected race item is nil")
+            return
+        }
+
+        // Get a reference to the character that was tapped on
+        let selectedRace = races[tableView.indexPathForSelectedRow!.row]
+        
+        racesDelegate?.navigateToDetailView(selectedRace: selectedRace)
     }
 }

@@ -41,7 +41,7 @@ class DriversViewController: UIViewController {
         // Set current year as default
         selectedYear = Date().convertDate(withFormat: "YYYY")
         
-        fetchSelectedYearDrivers()
+//        fetchSelectedYearDrivers()
     }
     
     func fetchSelectedYearDrivers() {

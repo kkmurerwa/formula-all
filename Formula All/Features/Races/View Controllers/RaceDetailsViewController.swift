@@ -15,7 +15,27 @@ class RaceDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        dump(raceItem)
+        setUpViews()
+    }
+    
+    func setUpViews() {
+        // Hide tab bar
+        self.tabBarController?.tabBar.isHidden = true
+        
+        // Ensure raceitem is not null
+        guard raceItem != nil else {
+            print("Race Item is nil")
+            return
+        }
+        
+        dump("RaceItem: \(raceItem!)")
+        
+        
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        // Restore tab bar
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
 }

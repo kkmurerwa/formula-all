@@ -480,10 +480,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JkX-7I-4yG">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
-                                <viewLayoutGuide key="contentLayoutGuide" id="vOU-x2-bEB"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="kKX-aG-Gve"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JkX-7I-4yG">
+                                <rect key="frame" x="0.0" y="138" width="414" height="675"/>
                             </scrollView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="32V-JE-HWf" customClass="ButtonBarView" customModule="XLPagerTabStrip">
                                 <rect key="frame" x="0.0" y="88" width="414" height="50"/>
@@ -516,6 +514,7 @@
                     <connections>
                         <outlet property="buttonBarView" destination="32V-JE-HWf" id="xYA-ZI-fg4"/>
                         <outlet property="containerView" destination="JkX-7I-4yG" id="97V-DW-7NK"/>
+                        <segue destination="T10-Q2-gub" kind="show" identifier="RaceDetails" id="ZdL-qt-lmT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhO-IR-dQt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -630,7 +629,6 @@
                                             <outlet property="grandPrixLabel" destination="DuO-re-x0F" id="qDl-1b-nBD"/>
                                             <outlet property="monthLabel" destination="MD3-5e-WIi" id="nwv-va-FZn"/>
                                             <outlet property="raceRoundLabel" destination="fGF-cS-3fA" id="IJA-6S-fLN"/>
-                                            <segue destination="T10-Q2-gub" kind="showDetail" identifier="" id="9EP-jD-cb7"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -764,7 +762,6 @@
                                             <outlet property="grandPrixLabel" destination="Owz-3z-TCV" id="5FN-Yr-Ohv"/>
                                             <outlet property="monthLabel" destination="mKp-xZ-Q47" id="njP-0Q-ahk"/>
                                             <outlet property="raceRoundLabel" destination="7FL-Bh-ies" id="CRa-4e-NEQ"/>
-                                            <segue destination="T10-Q2-gub" kind="showDetail" identifier="" id="D08-Qx-gbL"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -929,7 +926,6 @@
                                             <outlet property="grandPrixLabel" destination="Yao-X5-fw4" id="FgP-G9-RU0"/>
                                             <outlet property="monthLabel" destination="fN1-uF-mOl" id="P6Q-vw-Oai"/>
                                             <outlet property="raceRoundLabel" destination="caR-PF-IaJ" id="iU3-bC-QjQ"/>
-                                            <segue destination="T10-Q2-gub" kind="showDetail" id="hon-FO-4NG"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -963,15 +959,16 @@
             <objects>
                 <viewController id="T10-Q2-gub" customClass="RaceDetailsViewController" customModule="Formula_All" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="THn-9F-CkB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="0GZ-nH-eGk"/>
-                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="b43-Qj-Z4i"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQL-I6-TuV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880" y="2977"/>
+            <point key="canvasLocation" x="880" y="2673"/>
         </scene>
         <!--Rankings-->
         <scene sceneID="clK-qg-FW9">
@@ -990,9 +987,6 @@
             <point key="canvasLocation" x="-75" y="1063"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="D08-Qx-gbL"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="chevron.down" catalog="system" width="128" height="72"/>
         <image name="chevron.right" catalog="system" width="96" height="128"/>

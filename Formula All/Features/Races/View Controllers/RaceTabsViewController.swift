@@ -10,6 +10,8 @@ import XLPagerTabStrip
 
 class RaceTabsViewController: ButtonBarPagerTabStripViewController {
     
+    var selectedRace: RaceItem?
+    
     override func viewDidLoad() {
         loadDesign()
         
@@ -17,11 +19,18 @@ class RaceTabsViewController: ButtonBarPagerTabStripViewController {
     }
     
     override func viewControllers(for pagerTabStripController: PagerTabStripViewController) -> [UIViewController] {
-        let child_1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardIDs.NEXT_RACES_ID)
-        let child_2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardIDs.PREVIOUS_RACES_ID)
-        let child_3 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardIDs.SEASON_RACES_ID)
+        let nextRacesVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardIDs.NEXT_RACES_ID) as! NextRacesViewController
         
-        return [child_1, child_2, child_3]
+        let previousRacesVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardIDs.PREVIOUS_RACES_ID) as! PreviousRacesViewController
+        
+        let seasonRacesVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: Constants.StoryBoardIDs.SEASON_RACES_ID) as! SeasonRacesViewController
+        
+        // Set self as delegate to all child screens
+        nextRacesVC.racesDelegate = self
+        previousRacesVC.racesDelegate = self
+        seasonRacesVC.racesDelegate = self
+        
+        return [nextRacesVC, previousRacesVC, seasonRacesVC]
     }
     
     func loadDesign() {
@@ -50,4 +59,35 @@ class RaceTabsViewController: ButtonBarPagerTabStripViewController {
         }
         
     }
+    
+    // MARK: - Segue methods
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        // Make sure that a character was selected
+        guard selectedRace != nil else {
+            return
+        }
+
+        // Get a reference to the detail view controller
+        let detailViewController = segue.destination as! RaceDetailsViewController
+
+        // Set the character property of the detail view controller
+        detailViewController.raceItem = selectedRace
+
+    }
+    
+}
+
+extension RaceTabsViewController: RacesViewControllerDelegate {
+    
+    func navigateToDetailView(selectedRace: RaceItem) {
+        print("Navigation clicked")
+        
+        // Set the value to be passed to the detail view controller
+        self.selectedRace = selectedRace
+        
+        performSegue(withIdentifier: Constants.Segues.showRaceDetails, sender: self)
+    }
+    
 }
