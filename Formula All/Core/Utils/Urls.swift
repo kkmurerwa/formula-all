@@ -74,10 +74,15 @@ class Urls {
         return "\(API_URL)/races?season=\(forSeason)"
     }
     
+    static func RACES_BY_COMPETITION(forSeason: String, competition: Int) -> String {
+        return "\(API_URL)/races?season=\(forSeason)&"
+    }
+    
     static func RACES(
         byId: Int? = nil,
         ofType: String? = nil,
         forSeason: String? = nil,
+        forCompetition: Int? = nil,
         raceDate: Constants.RaceDate
     ) -> String {
         
@@ -95,6 +100,10 @@ class Urls {
             params.append("season=\(season)")
         }
          
+        if let competition = forCompetition {
+            params.append("competition=\(competition)")
+        }
+        
         switch raceDate {
         case .next:
             params.append("next=\(limit)")

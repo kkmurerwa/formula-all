@@ -13,8 +13,9 @@ extension Date {
         // Create Date Formatter
         let dateFormatter = DateFormatter()
 
-        // Set Date Format
+        // Set Date Format and local timezone
         dateFormatter.dateFormat = withFormat
+        dateFormatter.timeZone = TimeZone.current
 
         // Convert Date to String
         return dateFormatter.string(from: self)

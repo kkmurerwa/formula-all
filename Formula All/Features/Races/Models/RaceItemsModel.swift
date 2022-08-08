@@ -15,10 +15,17 @@ class RaceItemsModel {
         byId: Int? = nil,
         ofType: String? = nil,
         forSeason: String? = nil,
+        forCompetition: Int? = nil,
         raceDate: Constants.RaceDate
     ) {
         
-        let racesUrlString = Urls.RACES(byId: byId, ofType: ofType, forSeason: forSeason, raceDate: raceDate)
+        let racesUrlString = Urls.RACES(
+            byId: byId,
+            ofType: ofType,
+            forSeason: forSeason,
+            forCompetition: forCompetition,
+            raceDate: raceDate
+        )
         
         print("Races URL String: \(racesUrlString)")
         

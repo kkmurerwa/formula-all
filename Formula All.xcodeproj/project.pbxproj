@@ -60,6 +60,7 @@
 		F5D509772889E12E008530D5 /* RaceItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509762889E12E008530D5 /* RaceItemsModel.swift */; };
 		F5EBBB64289064FC007F24F5 /* SupportedYearsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EBBB63289064FC007F24F5 /* SupportedYearsModel.swift */; };
 		F5EBBB67289069FB007F24F5 /* RaceDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5EBBB66289069FB007F24F5 /* RaceDetailsViewController.swift */; };
+		F5FAACDB28A133110007AD09 /* ScheduleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FAACDA28A133110007AD09 /* ScheduleTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,6 +121,7 @@
 		F5D509762889E12E008530D5 /* RaceItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsModel.swift; sourceTree = "<group>"; };
 		F5EBBB63289064FC007F24F5 /* SupportedYearsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportedYearsModel.swift; sourceTree = "<group>"; };
 		F5EBBB66289069FB007F24F5 /* RaceDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceDetailsViewController.swift; sourceTree = "<group>"; };
+		F5FAACDA28A133110007AD09 /* ScheduleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -335,7 +337,6 @@
 		F55EBABB287994C400FD6F59 /* Races */ = {
 			isa = PBXGroup;
 			children = (
-				F5A0591328848307008428FA /* Constants */,
 				F5A059142884830F008428FA /* Delegates */,
 				F5A0591528848318008428FA /* Models */,
 				F5A059162884831E008428FA /* View Controllers */,
@@ -364,13 +365,6 @@
 				F5A05924288490E6008428FA /* Views */,
 			);
 			path = Circuits;
-			sourceTree = "<group>";
-		};
-		F5A0591328848307008428FA /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		F5A059142884830F008428FA /* Delegates */ = {
@@ -412,6 +406,7 @@
 			isa = PBXGroup;
 			children = (
 				F5703C85288C763100ACA78B /* RaceTableViewCell.swift */,
+				F5FAACDA28A133110007AD09 /* ScheduleTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -592,6 +587,7 @@
 				F5703C86288C763100ACA78B /* RaceTableViewCell.swift in Sources */,
 				F505D6972879DA3900EFB31F /* DriverRankingItem.swift in Sources */,
 				F532329F2889CFBE004D7557 /* NextRacesViewController.swift in Sources */,
+				F5FAACDB28A133110007AD09 /* ScheduleTableViewCell.swift in Sources */,
 				F505D6932879D98A00EFB31F /* DriverRankingDriverInfo.swift in Sources */,
 				F505D68D2879D2EE00EFB31F /* ImageCacheManager.swift in Sources */,
 				F5D509772889E12E008530D5 /* RaceItemsModel.swift in Sources */,
