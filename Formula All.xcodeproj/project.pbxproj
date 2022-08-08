@@ -296,14 +296,12 @@
 		F55EBAB72879931F00FD6F59 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				F5FAACE128A13D920007AD09 /* Default Delegates */,
+				F5FAACE028A13D810007AD09 /* Storyboards */,
 				F5EBBB62289064EC007F24F5 /* Models */,
 				F51C3C182884AC4A0070D84B /* Extensions */,
 				F505D6872879D25800EFB31F /* Utils */,
 				F505D6862879D1FB00EFB31F /* Network */,
-				F55EBAA22879930A00FD6F59 /* AppDelegate.swift */,
-				F55EBAAD2879930C00FD6F59 /* LaunchScreen.storyboard */,
-				F55EBAA82879930A00FD6F59 /* Main.storyboard */,
-				F55EBAA42879930A00FD6F59 /* SceneDelegate.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -454,6 +452,24 @@
 				F5EBBB63289064FC007F24F5 /* SupportedYearsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		F5FAACE028A13D810007AD09 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F55EBAAD2879930C00FD6F59 /* LaunchScreen.storyboard */,
+				F55EBAA82879930A00FD6F59 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F5FAACE128A13D920007AD09 /* Default Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				F55EBAA22879930A00FD6F59 /* AppDelegate.swift */,
+				F55EBAA42879930A00FD6F59 /* SceneDelegate.swift */,
+			);
+			path = "Default Delegates";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
