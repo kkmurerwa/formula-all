@@ -39,6 +39,10 @@ class Urls {
         return "\(API_URL)/drivers?search=\(withKey)"
     }
     
+    static func DRIVER_DETAILS(id: Int) -> String {
+        return "\(API_URL)/drivers?id=\(id)"
+    }
+    
     static func DRIVER_RANKINGS_URL(forYear: String) -> String {
         return "\(API_URL)/rankings/drivers?season=\(forYear)"
     }

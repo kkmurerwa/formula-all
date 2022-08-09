@@ -9,7 +9,7 @@ import Foundation
 
 struct DriverInfo: Decodable {
     
-    let id: Int?
+    let id: Int
     let name: String?
     let abbr: String?
     let number: Int?

@@ -24,8 +24,6 @@ class DriversViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print("DriversViewController did load")
-        
         setPopupButton()
         
         // Set table view data source and delegate as the viewcontroller(self)
@@ -106,6 +104,32 @@ class DriversViewController: UIViewController {
             tableView.isHidden = false
         }
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        // Make sure that a video was selected
+        guard tableView.indexPathForSelectedRow != nil else {
+            return
+        }
+        
+        
+        if segue.identifier == Constants.Segues.showDriverDetails {
+            if segue.destination is DriverDetailsViewController {
+                
+                // Get a reference to the video that was tapped on
+                let selectedDriver = drivers[tableView.indexPathForSelectedRow!.row]
+            
+                // Get a reference to the detail view controller
+                let driverDetailsVC = segue.destination as! DriverDetailsViewController
+                
+                // Set the video property of the detail view controller
+                driverDetailsVC.selectedDriver = selectedDriver.driver
+                
+            }
+        }
+    }
+    
 }
 
 
@@ -143,6 +167,10 @@ extension DriversViewController: UITableViewDataSource, UITableViewDelegate {
         
         // Return the cell for displaying
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: Constants.Segues.showDriverDetails, sender: nil)
     }
     
 }

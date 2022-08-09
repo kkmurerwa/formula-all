@@ -15,6 +15,7 @@ struct Constants {
     struct TableViewCells {
         static let CIRCUIT_CELL_ID = "CircuitCell"
         static let DRIVER_CELL_ID = "DriverCell"
+        static let DRIVER_TEAM_CELL_ID = "DriverTeamCell"
         static let TEAM_CELL_ID = "TeamCell"
         static let RACE_CELL_ID = "RaceCell"
         static let RACE_SCHEDULE_ID = "RaceScheduleCell"
@@ -37,6 +38,7 @@ struct Constants {
     struct Segues {
         static let showRaceDetails = "RaceDetails"
         static let showRaceResults = "RaceResults"
+        static let showDriverDetails = "DriverDetails"
     }
     
     

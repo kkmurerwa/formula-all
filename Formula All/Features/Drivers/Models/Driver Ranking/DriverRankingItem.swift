@@ -11,7 +11,7 @@ struct DriverRankingItem: Decodable {
     
     let position: Int?
     let driver: DriverInfo?
-    let team: DriverRankingTeamInfo?
+    let team: TeamDetails?
     var points: Any?
     let wins: Int?
     let behind: Int?
@@ -32,7 +32,7 @@ struct DriverRankingItem: Decodable {
         
         self.position = try container.decodeIfPresent(Int.self, forKey: .position)
         self.driver = try container.decode(DriverInfo.self, forKey: .driver)
-        self.team = try container.decode(DriverRankingTeamInfo.self, forKey: .team)
+        self.team = try container.decode(TeamDetails.self, forKey: .team)
         
         // Attempt to decode points to any type
         self.points = try? container.decode(Int.self, forKey: .points)
