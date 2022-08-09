@@ -303,7 +303,6 @@
 				F55EBABD2879950400FD6F59 /* Circuits */,
 				F55EBAB9287994B800FD6F59 /* Drivers */,
 				F55EBABB287994C400FD6F59 /* Races */,
-				F55EBABA287994BF00FD6F59 /* Rankings */,
 				F55EBABC287994E800FD6F59 /* Teams */,
 			);
 			path = Features;
@@ -339,13 +338,6 @@
 				F505D69E2879F6E800EFB31F /* Views */,
 			);
 			path = Drivers;
-			sourceTree = "<group>";
-		};
-		F55EBABA287994BF00FD6F59 /* Rankings */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Rankings;
 			sourceTree = "<group>";
 		};
 		F55EBABB287994C400FD6F59 /* Races */ = {

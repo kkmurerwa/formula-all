@@ -21,7 +21,6 @@
                     <connections>
                         <segue destination="Xbd-yP-mby" kind="relationship" relationship="viewControllers" id="aRi-E3-ia2"/>
                         <segue destination="R4Z-Vs-Qro" kind="relationship" relationship="viewControllers" id="R4k-v2-Imx"/>
-                        <segue destination="peT-76-9Xe" kind="relationship" relationship="viewControllers" id="zsv-K7-fDA"/>
                         <segue destination="sxW-wM-T3n" kind="relationship" relationship="viewControllers" id="5sj-0l-zUE"/>
                         <segue destination="KbM-DG-rzO" kind="relationship" relationship="viewControllers" id="8hK-Bo-c6o"/>
                     </connections>
@@ -79,7 +78,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ujP-kh-nZx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1026" y="263"/>
+            <point key="canvasLocation" x="-733" y="263"/>
         </scene>
         <!--Races-->
         <scene sceneID="pK1-h1-cgi">
@@ -96,24 +95,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YQa-g5-uS1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="263"/>
-        </scene>
-        <!--Rankings-->
-        <scene sceneID="tEU-Yw-UfT">
-            <objects>
-                <navigationController id="peT-76-9Xe" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Rankings" image="ranking" id="VRd-XD-jki"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H1z-wO-9E5">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="b7u-yD-gCw" kind="relationship" relationship="rootViewController" id="zex-dy-jiL"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AJ4-wS-uRN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-75" y="263"/>
+            <point key="canvasLocation" x="558" y="263"/>
         </scene>
         <!--Driver Rankings-->
         <scene sceneID="xpX-O5-O8w">
@@ -470,7 +452,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RJS-y2-gXK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1026.0869565217392" y="1062.7232142857142"/>
+            <point key="canvasLocation" x="-733" y="1063"/>
         </scene>
         <!--Races-->
         <scene sceneID="guR-1E-V86">
@@ -519,11 +501,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mhO-IR-dQt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="880" y="1063"/>
+            <point key="canvasLocation" x="558" y="1063"/>
         </scene>
         <!--Next Races View Controller-->
         <scene sceneID="YtT-tc-75X">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gBP-ml-pB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="NextRaces" id="mnG-hr-oL1" customClass="NextRacesViewController" customModule="Formula_All" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rco-iQ-G3x">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -650,9 +633,8 @@
                         <outlet property="tableView" destination="iu9-F9-Hc7" id="zNS-wA-8Uw"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gBP-ml-pB0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-75.362318840579718" y="1855.5803571428571"/>
+            <point key="canvasLocation" x="-223" y="1856"/>
         </scene>
         <!--Previous Races View Controller-->
         <scene sceneID="uuN-lC-wMx">
@@ -785,7 +767,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nxh-Lu-RHh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.71014492753625" y="1855.5803571428571"/>
+            <point key="canvasLocation" x="558" y="1856"/>
         </scene>
         <!--Season Races View Controller-->
         <scene sceneID="oo6-GN-wkM">
@@ -952,7 +934,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AHh-KA-NxQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1824.6376811594205" y="1855.5803571428571"/>
+            <point key="canvasLocation" x="1375" y="1856"/>
         </scene>
         <!--Race Details View Controller-->
         <scene sceneID="JBo-Op-lqd">
@@ -1211,7 +1193,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DQL-I6-TuV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.71014492753625" y="2672.5446428571427"/>
+            <point key="canvasLocation" x="558" y="2673"/>
         </scene>
         <!--Race Results View Controller-->
         <scene sceneID="4xo-jk-y7b">
@@ -1404,23 +1386,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2zH-T9-gxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="879.71014492753625" y="3424.5535714285711"/>
-        </scene>
-        <!--Rankings-->
-        <scene sceneID="clK-qg-FW9">
-            <objects>
-                <viewController id="b7u-yD-gCw" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yR4-h8-Kb1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="zio-c3-EX2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Rankings" id="dcL-lp-xRW"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fhH-Yc-tAt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-75" y="1063"/>
+            <point key="canvasLocation" x="558" y="3423"/>
         </scene>
     </scenes>
     <resources>
@@ -1430,7 +1396,6 @@
         <image name="helmet" width="25" height="25"/>
         <image name="race" width="25" height="25"/>
         <image name="race-track" width="25" height="25"/>
-        <image name="ranking" width="25" height="25"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
