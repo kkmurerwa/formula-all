@@ -36,9 +36,6 @@ struct Constants {
     
     struct Segues {
         static let showRaceDetails = "RaceDetails"
-        static let showNextRaceDetails = "nextRaceDetails"
-        static let showPreviousRaceDetails = "previousRaceDetails"
-        static let showAllRaceItemDetails = "allRaceItemDetails"
         static let showRaceResults = "RaceResults"
     }
     

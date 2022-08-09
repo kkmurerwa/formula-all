@@ -28,8 +28,6 @@ class DriverTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func setDetails(_ position: Int, _ passedDriver: DriverRankingItem) {
@@ -54,8 +52,6 @@ class DriverTableViewCell: UITableViewCell {
         self.nameLabel.text = driverItem?.driver?.name
         self.teamLabel.text = driverItem?.team?.name
         self.pointsLabel.text = "\(driverItem?.points ?? "0") Points"
-        
-//        print("Points: \(driverItem?.points)")
         
         // Load image with custom class
         self.driverImageView.loadImage(from: driverItem?.driver?.image ?? "")

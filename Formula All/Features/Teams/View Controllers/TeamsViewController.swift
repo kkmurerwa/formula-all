@@ -51,7 +51,6 @@ class TeamsViewController: UIViewController {
     func setPopupButton() {
         
         let optionClosure = {(action: UIAction) in
-            print(action.title)
             
             self.showIsLoading(isLoading: true)
             
@@ -126,9 +125,6 @@ extension TeamsViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.TEAM_CELL_ID, for: indexPath) as! TeamsTableViewCell
-        
-        
-        // Configure the cell with the data
         
         // Get title for current video
         let team = self.teams[indexPath.row]

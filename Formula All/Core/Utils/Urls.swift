@@ -70,14 +70,6 @@ class Urls {
     
     // MARK: - Races URLs
     
-    static func RACES_BY_SEASON(forSeason: String) -> String {
-        return "\(API_URL)/races?season=\(forSeason)"
-    }
-    
-    static func RACES_BY_COMPETITION(forSeason: String, competition: Int) -> String {
-        return "\(API_URL)/races?season=\(forSeason)&"
-    }
-    
     static func RACES(
         byId: Int? = nil,
         ofType: String? = nil,
@@ -123,7 +115,11 @@ class Urls {
         return "\(API_URL)/rankings/races?race=\(forRace)"
     }
     
+    
+    
+    
     // MARK: - Circuits URLs
+    
     static let CIRCUITS_URL = "\(API_URL)/circuits"
     
 }

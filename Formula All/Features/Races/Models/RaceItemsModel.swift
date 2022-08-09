@@ -27,8 +27,6 @@ class RaceItemsModel {
             raceDate: raceDate
         )
         
-        print("Races URL String: \(racesUrlString)")
-        
         // Create a URL object
         let url = URL(string: racesUrlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? "")
         

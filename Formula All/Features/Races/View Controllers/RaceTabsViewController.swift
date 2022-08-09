@@ -82,8 +82,6 @@ class RaceTabsViewController: ButtonBarPagerTabStripViewController {
 extension RaceTabsViewController: RacesViewControllerDelegate {
     
     func navigateToDetailView(selectedRace: RaceItem) {
-        print("Navigation clicked")
-        
         // Set the value to be passed to the detail view controller
         self.selectedRace = selectedRace
         

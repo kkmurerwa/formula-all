@@ -48,8 +48,6 @@ class RaceDetailsViewController: UIViewController {
             return
         }
         
-        dump("RaceItem: \(raceItem!)")
-        
         // Show items
         raceTitleLable.text = raceItem!.competition.name
         circuitNameLabel.text = raceItem!.circuit.name
@@ -115,8 +113,6 @@ extension RaceDetailsViewController: RaceItemsModelDelegate {
         dump(races)
         
         self.races = races
-        
-//        showIsLoading(isLoading: false)
         
         scheduleTableView.reloadData()
     }

@@ -93,9 +93,6 @@ extension NextRacesViewController: UITableViewDelegate, UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.RACE_CELL_ID, for: indexPath) as! RaceTableViewCell
         
-        
-        // Configure the cell with the data
-        
         // Get title for current race
         let race = self.races[indexPath.row]
         
@@ -106,8 +103,6 @@ extension NextRacesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        print("Calling navigation delegate")
         
         // Make sure that a character was selected
         guard tableView.indexPathForSelectedRow != nil else {

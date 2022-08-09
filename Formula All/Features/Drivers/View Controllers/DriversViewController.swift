@@ -41,7 +41,7 @@ class DriversViewController: UIViewController {
         // Set current year as default
         selectedYear = Date().convertDate(withFormat: "YYYY")
         
-//        fetchSelectedYearDrivers()
+        fetchSelectedYearDrivers()
     }
     
     func fetchSelectedYearDrivers() {
@@ -51,6 +51,7 @@ class DriversViewController: UIViewController {
         // Initial network call
         model.getDriverRanking(year: "\(selectedYear)")
     }
+    
     
     // MARK: - Seasons Popup Button
     
@@ -134,9 +135,6 @@ extension DriversViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.DRIVER_CELL_ID, for: indexPath) as! DriverTableViewCell
-        
-        
-        // Configure the cell with the data
         
         // Get title for current video
         let driver = self.drivers[indexPath.row]

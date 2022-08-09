@@ -13,8 +13,6 @@ class CircuitsModel {
     
     func getCircuits() {
         
-        print("Circuits loading")
-        
         // Create a URL object
         let url = URL(string: Urls.CIRCUITS_URL)
         
@@ -57,8 +55,6 @@ class CircuitsModel {
                     
                     // Call the main thread to pass the function through it
                     DispatchQueue.main.async {
-                        
-                        dump(response.items)
                         
                         // Call the "driversFetched" method of the delegate
                         self.delegate?.circuitsFetched(response.items!)
