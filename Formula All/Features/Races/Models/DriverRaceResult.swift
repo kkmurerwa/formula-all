@@ -15,8 +15,8 @@ struct DriverRaceResult: Decodable {
     let position: Int
     let time: String
     let laps: Int
-    let grid: String
-    let pits: Int
+    let grid: String?
+    let pits: Int?
     let gap: Int?
     
     enum CodingKeys: String, CodingKey {
@@ -40,8 +40,8 @@ struct DriverRaceResult: Decodable {
         self.position = try container.decode(Int.self, forKey: .position)
         self.time = try container.decode(String.self, forKey: .time)
         self.laps = try container.decode(Int.self, forKey: .laps)
-        self.grid = try container.decode(String.self, forKey: .grid)
-        self.pits = try container.decode(Int.self, forKey: .pits)
+        self.grid = try? container.decode(String.self, forKey: .grid)
+        self.pits = try? container.decode(Int.self, forKey: .pits)
         self.gap = try? container.decode(Int.self, forKey: .gap)
     }
     

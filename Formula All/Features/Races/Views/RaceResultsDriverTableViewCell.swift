@@ -47,8 +47,8 @@ class RaceResultsDriverTableViewCell: UITableViewCell {
         // Show values
         driverPositionLabel.text = String(driver.position)
         driverNameLabel.text = driver.driver.name
-        driverGridNumberLabel.text = driver.grid
-        pitStopsLabel.text = String(driver.pits)
+        driverGridNumberLabel.text = driver.grid ?? "0"
+        pitStopsLabel.text = String(driver.pits ?? 0)
         lapsCompletedLabel.text = String(driver.laps)
         driverTimeLabel.text = driver.time
     }

@@ -67,20 +67,24 @@ extension RaceResultsViewController: RaceResultsModelDelegate {
 // MARK: -> Table View Methods
 extension RaceResultsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drivers.count + 1
+        return section == 0 ? 1 : drivers.count
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
 
-        if indexPath.row == 0 {
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.RACERS_TABLE_DRIVER_ID, for: indexPath) as! RaceResultsDriverTableViewCell
+        if indexPath.section == 0 {
+            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.RACERS_TABLE_TITLE_ID, for: indexPath) as! RaceResultsTitleTableViewCell
             
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.RACERS_TABLE_DRIVER_ID, for: indexPath) as! RaceResultsDriverTableViewCell
             
             // Get title for current race
-            let race = self.drivers[indexPath.row - 1]
+            let race = self.drivers[indexPath.row]
 
             // Configure the cell with the data
             cell.setDetails(race)
