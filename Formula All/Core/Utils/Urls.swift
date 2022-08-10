@@ -9,10 +9,9 @@ import Foundation
 
 class Urls {
     
-    static let API_URL = "https://v1.formula-1.api-sports.io"
-    
-    
     // MARK: - API Auth section
+    
+    static let API_URL = "https://v1.formula-1.api-sports.io"
     
     static let WEB_HOST = "v1.formula-1.api-sports.io"
     

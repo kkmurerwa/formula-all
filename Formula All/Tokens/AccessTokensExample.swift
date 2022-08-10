@@ -7,6 +7,10 @@
 
 import Foundation
 
-class AccessTokensExample { // Rename this class to 'AccessTokens' for the app to work
-    static let ACCESS_TOKEN = "" // Add your access token here
+// Rename this class to 'AccessTokens' for the app to build
+class AccessTokensExample {
+    
+    // Add your access token here. You can create it at https://api-sports.io/
+    static let ACCESS_TOKEN = ""
+    
 }
