@@ -29,8 +29,8 @@ class DriversViewController: UIViewController {
         // Set table view data source and delegate as the viewcontroller(self)
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.rowHeight = 120
-        tableView.estimatedRowHeight = 120
+//        tableView.rowHeight = 120
+//        tableView.estimatedRowHeight = 120
         
         
         // Set model delegate as viewcontroller(self)

@@ -20,7 +20,16 @@ class ImageCacheManager {
     
     static func getImageCache(_ url: String) -> Data? {
         
-        // Try to get the data for the specified url
+//        do {
+//            if let imageData = try cache[url] {
+//                return imageData
+//            }
+//            
+//            return nil
+//        } catch {
+//
+//        }
+        
         return cache[url]
         
     }

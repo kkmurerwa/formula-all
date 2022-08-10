@@ -24,9 +24,15 @@ class DriverDetailsViewController: UIViewController {
     var selectedDriver: DriverInfo?
     
     var model = DriverDetailsModel()
+    
+    var teams = [DriverTeam]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Set table view data source and delegate as the viewcontroller(self)
+        teamsTableView.dataSource = self
+        teamsTableView.delegate = self
 
         // Do any additional setup after loading the view.
         showPassedDetails()
@@ -37,7 +43,6 @@ class DriverDetailsViewController: UIViewController {
     func showPassedDetails() {
         // Hide tab bar
         self.tabBarController?.tabBar.isHidden = true
-        
         
         guard selectedDriver != nil else {
             print("Passed driver is nil")
@@ -71,12 +76,28 @@ class DriverDetailsViewController: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        // Clear all fields
+        driverHomeLabel.text = ""
+        driverBirthDateLabel.text = ""
+        driverNationalityLabel.text = ""
+        driverBirthPlaceLabel.text = ""
+        driverGpsEntered.text = ""
+        driverPodiumsLabel.text = ""
+        driverChampionshipsLabel.text = ""
+        driverCareerPointsLabel.text = ""
+    }
+    
     override func viewWillDisappear(_ animated: Bool) {
         // Restore tab bar
         self.tabBarController?.tabBar.isHidden = false
     }
     
 }
+
+
+
+// MARK: - Driver details model delegate
 
 extension DriverDetailsViewController: DriverDetailsModelDelegate {
     
@@ -86,6 +107,33 @@ extension DriverDetailsViewController: DriverDetailsModelDelegate {
         }
         
         showLoadedDetails(driverDetails: driverDetails[0])
+        
+        teams = driverDetails[0].teams
+        teamsTableView.reloadData()
+    }
+    
+}
+
+
+
+// MARK: - Table view methods
+
+extension DriverDetailsViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return teams.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.TableViewCells.DRIVER_TEAM_CELL_ID, for: indexPath) as! DriverTeamTableViewCell
+        
+        let team = self.teams[indexPath.row]
+        
+        cell.setDetails(team)
+        
+        // Return the cell for displaying
+        return cell
     }
     
 }
