@@ -29,8 +29,6 @@ class DriversViewController: UIViewController {
         // Set table view data source and delegate as the viewcontroller(self)
         tableView.dataSource = self
         tableView.delegate = self
-//        tableView.rowHeight = 120
-//        tableView.estimatedRowHeight = 120
         
         
         // Set model delegate as viewcontroller(self)
@@ -40,6 +38,20 @@ class DriversViewController: UIViewController {
         selectedYear = Date().convertDate(withFormat: "YYYY")
         
         fetchSelectedYearDrivers()
+        
+        // Set up refreshing
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshDrivers), for: .valueChanged)
+        
+        // Link view to refresh control
+        tableView.refreshControl = refreshControl
+    }
+    
+    @objc func refreshDrivers(refreshControl: UIRefreshControl) {
+        fetchSelectedYearDrivers()
+        
+        // End refreshing
+        refreshControl.endRefreshing()
     }
     
     func fetchSelectedYearDrivers() {

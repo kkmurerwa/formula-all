@@ -38,6 +38,20 @@ class TeamsViewController: UIViewController {
         
         fetchSelectedYearTeams()
         
+        // Set up refreshing
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshDrivers), for: .valueChanged)
+        
+        // Link view to refresh control
+        tableView.refreshControl = refreshControl
+        
+    }
+    
+    @objc func refreshDrivers(refreshControl: UIRefreshControl) {
+        fetchSelectedYearTeams()
+        
+        // End refreshing
+        refreshControl.endRefreshing()
     }
     
     func fetchSelectedYearTeams() {
@@ -98,6 +112,9 @@ class TeamsViewController: UIViewController {
             tableView.isHidden = false
         }
     }
+    
+    
+    
 }
 
 
