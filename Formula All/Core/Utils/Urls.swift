@@ -16,10 +16,7 @@ class Urls {
     
     static let WEB_HOST = "v1.formula-1.api-sports.io"
     
-    static let ACCESS_TOKEN_KKMURERWA = "b2527075bb6673ccf19ae7a94f19f13c"
-    static let ACCESS_TOKEN_XWAXES = "b18a979cf82175f555de495616992e33"
-    
-    static let ACCESS_TOKEN = ACCESS_TOKEN_XWAXES
+    static let ACCESS_TOKEN = AccessTokens.ACCESS_TOKEN
     
     static func API_REQUEST(url: URL, httpMethod: String = "GET") -> URLRequest? {
         var request = URLRequest(url: url)
