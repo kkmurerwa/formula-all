@@ -60,7 +60,7 @@ class DriverDetailsViewController: UIViewController {
     }
     
     func showLoadedDetails(driverDetails: DriverDetails) {
-        driverHomeLabel.text = "\(driverDetails.birthplace ?? "Not known"), \(driverDetails.country.name ?? "Not known")"
+        driverHomeLabel.text = driverDetails.country.name ?? "Not known"
         driverBirthDateLabel.text = driverDetails.birthdate
         driverNationalityLabel.text = driverDetails.nationality
         driverBirthPlaceLabel.text = driverDetails.birthplace
