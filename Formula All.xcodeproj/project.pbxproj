@@ -62,6 +62,8 @@
 		F5A059282884913F008428FA /* CircuitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A059272884913F008428FA /* CircuitsViewController.swift */; };
 		F5A0592A288491A2008428FA /* CircuitsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A05929288491A2008428FA /* CircuitsResponse.swift */; };
 		F5A0592C288491DD008428FA /* CircuitItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A0592B288491DD008428FA /* CircuitItem.swift */; };
+		F5A1821728A3B3E40090BF78 /* AccessTokensExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1821628A3B3E40090BF78 /* AccessTokensExample.swift */; };
+		F5A1821928A3B4360090BF78 /* AccessTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A1821828A3B4360090BF78 /* AccessTokens.swift */; };
 		F5D509732889E089008530D5 /* RaceItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509722889E089008530D5 /* RaceItemsResponse.swift */; };
 		F5D509752889E0DA008530D5 /* RaceItemsModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509742889E0DA008530D5 /* RaceItemsModelDelegate.swift */; };
 		F5D509772889E12E008530D5 /* RaceItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D509762889E12E008530D5 /* RaceItemsModel.swift */; };
@@ -138,6 +140,8 @@
 		F5A059272884913F008428FA /* CircuitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsViewController.swift; sourceTree = "<group>"; };
 		F5A05929288491A2008428FA /* CircuitsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitsResponse.swift; sourceTree = "<group>"; };
 		F5A0592B288491DD008428FA /* CircuitItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircuitItem.swift; sourceTree = "<group>"; };
+		F5A1821628A3B3E40090BF78 /* AccessTokensExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokensExample.swift; sourceTree = "<group>"; };
+		F5A1821828A3B4360090BF78 /* AccessTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessTokens.swift; sourceTree = "<group>"; };
 		F5D509722889E089008530D5 /* RaceItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsResponse.swift; sourceTree = "<group>"; };
 		F5D509742889E0DA008530D5 /* RaceItemsModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsModelDelegate.swift; sourceTree = "<group>"; };
 		F5D509762889E12E008530D5 /* RaceItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RaceItemsModel.swift; sourceTree = "<group>"; };
@@ -319,6 +323,7 @@
 		F55EBAA12879930A00FD6F59 /* Formula All */ = {
 			isa = PBXGroup;
 			children = (
+				F5A1821528A3B3C90090BF78 /* Tokens */,
 				F55EBAB72879931F00FD6F59 /* Core */,
 				F55EBAB62879931400FD6F59 /* Features */,
 				F55EBAB82879933000FD6F59 /* Resources */,
@@ -489,6 +494,15 @@
 				F5A0592528849108008428FA /* CircuitTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		F5A1821528A3B3C90090BF78 /* Tokens */ = {
+			isa = PBXGroup;
+			children = (
+				F5A1821628A3B3E40090BF78 /* AccessTokensExample.swift */,
+				F5A1821828A3B4360090BF78 /* AccessTokens.swift */,
+			);
+			path = Tokens;
 			sourceTree = "<group>";
 		};
 		F5EBBB62289064EC007F24F5 /* Models */ = {
@@ -678,6 +692,7 @@
 				F55EBAA52879930A00FD6F59 /* SceneDelegate.swift in Sources */,
 				F5FAACEB28A14B100007AD09 /* RaceItemMinimal.swift in Sources */,
 				F51C3C2B28855B790070D84B /* TeamsViewController.swift in Sources */,
+				F5A1821728A3B3E40090BF78 /* AccessTokensExample.swift in Sources */,
 				F51C3C29288559600070D84B /* TeamRankingModelDelegate.swift in Sources */,
 				F5A0590E2882CE3D008428FA /* RoundedImageView.swift in Sources */,
 				F5FAACE528A148A80007AD09 /* RaceResultsDriverTableViewCell.swift in Sources */,
@@ -692,6 +707,7 @@
 				F5258B8528A27F3E0029226D /* DriverTeamTableViewCell.swift in Sources */,
 				F5258B7528A267960029226D /* DriverCountry.swift in Sources */,
 				F5258B7928A2683D0029226D /* DriverTeam.swift in Sources */,
+				F5A1821928A3B4360090BF78 /* AccessTokens.swift in Sources */,
 				F51C3C23288556DB0070D84B /* TeamDetails.swift in Sources */,
 				F53232AD2889DC91004D7557 /* FastestLap.swift in Sources */,
 				F505D6A02879F70F00EFB31F /* DriverTableViewCell.swift in Sources */,
